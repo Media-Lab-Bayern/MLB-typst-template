@@ -1,4 +1,4 @@
-#import "vendor/tufte-memo/medialab-report.typ": *
+#import "vendor/mlb-template/medialab-report.typ": *
 
 #show: template.with(
   title: [A naïve discourse on automation],
