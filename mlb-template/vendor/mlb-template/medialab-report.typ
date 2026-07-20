@@ -495,14 +495,14 @@
       },
       {
         box(width: 100%, {
-          authorblock(authors, 2)
+          authorblock(authors, 1)
           infoblock(category, date, document-number)
         })
       }
     )
   } else {
-    infoblock(category, date, document-number)
     authorblock(authors, 2)
+    infoblock(category, date, document-number)
   }
   pagebreak()
   if toc {tocblock()}
