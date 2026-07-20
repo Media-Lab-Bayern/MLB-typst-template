@@ -267,7 +267,6 @@
     hyphenate: true,
     size: 11pt,
     lang: language,
-    smartquotes: true
   )
   set par(
     justify: false,
