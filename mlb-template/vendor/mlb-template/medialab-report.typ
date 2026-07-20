@@ -55,7 +55,6 @@
   author-bio: none, // dict: (name: "...", bio: "...", image: none) — closing "Artikel geschrieben von" note; image is optional, a rounded placeholder is drawn if omitted
   impressum: true,
   bib: none,
-  footer-content: none,
   doc
 ) = {
   // Document metadata
@@ -203,13 +202,6 @@
         {
           set text(fill: mlb-turquoise, font: sans-fonts, size: 8pt)
           if pagenum == 1 {
-            if type(footer-content) == array {
-              footer-content.at(0)
-              linebreak()
-            } else {
-              footer-content
-              linebreak()
-            }
             if draft [
               Draft document, #date.display().
               #linebreak()
@@ -222,13 +214,6 @@
               columns: (1fr, auto),
               align: (left + horizon, right + horizon),
               {
-                if type(footer-content) == array {
-                  footer-content.at(1)
-                  linebreak()
-                } else {
-                  footer-content
-                  linebreak()
-                }
                 if draft [
                   Draft document, #date.display().
                   #linebreak()
