@@ -66,7 +66,7 @@ Over time, email became one tool among many, used strategically depending on the
 
 This is what is meant by "negotiation": the technology didn't simply change journalism on its own. Instead, journalists adjusted how they used the technology to align with their existing professional values, such as accuracy, independence, and credibility.
 
-Despite this, journalists tend to view technological change as a deterministic force over which they have little say. I want to emphasise that this is a _myth_, that is empirically untenable.#note[This idea is generally referred to as _technological determinism_.
+Despite this, journalists tend to view technological change as a deterministic force over which they have little say. I want to emphasise that this is a _myth_, that is empirically untenable.#note(dy:-5em)[This idea is generally referred to as _technological determinism_.
 #linebreak()
 #linebreak()
 _Örnebring, H._ (2010). #link("https://doi.org/10.1177/1464884909350644")[Technology and journalism-as-labour: Historical perspectives]. Journalism, 11(1), 57–74.]
@@ -89,7 +89,7 @@ Expectations, of course, are not static but can change. Early expectations towar
 
 === Loud and quiet futuring on stage
 
-With that out of the way, let's turn to how people at the conferences I visited discussed the future of 'AI' in journalism. Generally speaking, I observed two modes or registers of futuring: _loud_ and _quiet_.#note(dy:28em)[I leaned on the fieldwork of Andreas Hepp on the ways Bay Area 'AI' groups talked about the future.
+With that out of the way, let's turn to how people at the conferences I visited discussed the future of 'AI' in journalism. Generally speaking, I observed two modes or registers of futuring: _loud_ and _quiet_.#note(dy:-3em)[I leaned on the fieldwork of Andreas Hepp on the ways Bay Area 'AI' groups talked about the future.
 #linebreak()
 #linebreak()
 _Hepp, A._ (2026). #link("https://doi.org/10.1177/01634437261454515")[The imaginative landscape of AI: Locating Silicon Valley's "quiet futuring"]. Media, Culture & Society.]
@@ -123,7 +123,7 @@ Structurally, both modes of talking about the future were protected. Audience qu
 
 This does not mean that critical voices were not present, but they were either in the minority at panels or isolated at their own sessions, prompting one attendee to remark that he feels there are "two completely different audiences" when it comes to AI.
 
-Crucially, I want to point out here that the line between those audiences does not run between adoption of 'AI' vs non-adoption or resistance, but in how 'AI' was understood: as a managerial tool vs 'AI' as a socio-technical system with inherent power-relations.#note(dy:-17em)[For example, most of the speakers in the group discussed below did not show a deeper understanding of how AI systems are built and embedded in broader social and technical contexts.
+Crucially, I want to point out here that the line between those audiences does not run between adoption of 'AI' vs non-adoption or resistance, but in how 'AI' was understood: as a managerial tool vs 'AI' as a socio-technical system with inherent power-relations.#note(dy:-4em)[For example, most of the speakers in the group discussed below did not show a deeper understanding of how AI systems are built and embedded in broader social and technical contexts.
 
 Instead, their knowledge was mainly limited to the visible parts of these systems, such as user interfaces, model benchmarks, and programming frameworks, rather than the underlying infrastructures, data practices, economical, and organisational factors that shape how AI works.]
 
@@ -196,7 +196,7 @@ _Bensaude Vincent, B._ (2014). #link("https://doi.org/10.1177/0963662513515371")
 Notably absent from these discussions was the term's critical lineage. Lisanne Bainbridge, writing on the "Ironies of Automation,"#note[_Bainbridge, L._ (1983). Ironies of automation. Automatica, 19(6), 775–779. https://doi.org/10.1016/0005-1098(83)90046-8] warned that placing humans in supervisory roles over increasingly automated systems risks deskilling and fatigue—the human is asked to monitor a system precisely when they are losing the expertise needed to detect its failures. Further, humans in such positions are often left with a bundle of unrelated tasks that a systems designer cannot automate but that they are expected to fulfil, thereby degrading a system's functionality. On stages, this warning went unmentioned: the loop was adopted as a reassuring label, stripped of the potential dangers of such configurations.
 
 The product of journalism is, in other words, not just a piece of content, but also a journalist. Building systems to replace skills or certain decision-making steps could result in less capable, less observant, less autonomous journalists and—in the worst case—a diminished public sphere.
-#note(dy:-5em,[
+#note(dy:0em,[
   #figure(
     image("/assets/loops.png"),
     caption:[The Euthanasia Coaster is a hypothetical steel roller coaster and euthanasia device designed with the sole purpose of killing its passengers.]
@@ -207,7 +207,7 @@ The limited diversity of speakers and, especially, the absence of people with HC
 
 = The datafication and liquidation of journalism
 
-It is thus not surprising that thinking with 'AI' leads to thinking about data, especially input data. While some use cases presented were interesting (such as helping with newsroom planning based on local council minutes), others were ethically fraught, such as automatically generating articles from police reports.#note(dy: -3em)[Giving PR departments of police units uncontrolled access to reporting is, in my opinion, way beyond what should be considered a reasonable use case, even though human police reporting is also not always up to journalism's own normative standards.] This datafication also extends inwards. The archive of news organisations is recast as a data pool that automated systems will draw from.
+It is thus not surprising that thinking with 'AI' leads to thinking about data, especially input data. While some use cases presented were interesting (such as helping with newsroom planning based on local council minutes), others were ethically fraught, such as automatically generating articles from police reports.#note(dy: -5em)[Giving PR departments of police units uncontrolled access to reporting is, in my opinion, way beyond what should be considered a reasonable use case, even though human police reporting is also not always up to journalism's own normative standards.] This datafication also extends inwards. The archive of news organisations is recast as a data pool that automated systems will draw from.
 
 Some people imagine a future where AI doesn't just help write articles, but replaces the article itself—breaking journalism down into raw facts that get reassembled differently for each reader.
 

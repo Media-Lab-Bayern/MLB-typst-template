@@ -18,7 +18,7 @@
   "IBM Plex Sans",
 )
 
-#let header-fonts = (
+#let heading-fonts = (
   "PP Formula",
 )
 
@@ -167,11 +167,13 @@
     margin: (
       left: 2cm,
       right: margin-right,
-      top: 2.5cm,
+      top: 3cm,
       bottom: 2.5cm,
     ),
     header: context {
       if counter(page).get().first() > 1 {
+        box(
+        width: 100% + margin-right - 2cm,
         grid(
           columns: (1fr, auto),
           align: (left + top, right + top),
@@ -200,10 +202,17 @@
           ],
           image(
             "../../../assets/logos/MLB-1-line.svg",
-            width: 0.8in,
+            width: 4cm,
             fit: "contain",
           ),
+        ),
         )
+      } else {
+        image(
+            "../../../assets/logos/MLB-1-line.svg",
+            width: 6cm,
+            fit: "contain",
+          )
       }
     },
     footer: context {
@@ -274,20 +283,12 @@
   )
 
   // === Frontmatter ===
-  let kickerblock(category, date, document-number) = wideblock({
-    image(
-            "../../../assets/logos/MLB-1-line.svg",
-            width: 2in,
-            fit: "contain",
-          )
-    v(1em)
-  })
 
   let titleblock(title: none, subtitle: none) = wideblock({
       set text(
         hyphenate: false,
         size: 40pt,
-        font: header-fonts,
+        font: heading-fonts,
         weight: "regular"
       )
       set par(
@@ -480,7 +481,6 @@
     v(3em, weak: true)
   })
 
-  kickerblock(category, date, document-number)
   titleblock(title: title, subtitle: subtitle)
   tagsblock(tags)
   coverimageblock(cover)
