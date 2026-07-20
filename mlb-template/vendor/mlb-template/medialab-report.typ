@@ -179,7 +179,7 @@
               tracking: 0.02em,
             )[
               #if document-number != none { upper(document-number) }
-              #h(1fr)
+              #h(1em)
               #if shorttitle != none { upper(shorttitle) } else { upper(title) }
               #if publisher != none {
                 linebreak()
@@ -297,7 +297,7 @@
       )
       title
       if subtitle != none {
-        set text(size: 11pt, weight: "regular")
+        set text(size: 11pt, weight: "regular", font: sans-fonts)
         v(-0.5em)
         subtitle
       }
@@ -332,17 +332,6 @@
         image(cover, width: 100%, height: frame-height, fit: "cover")
       )
     } else {
-      box(
-        width: 100%,
-        height: frame-height,
-        radius: 8pt,
-        stroke: (paint: mlb-turquoise, thickness: 0.6pt, dash: "dashed"),
-        fill: luma(250),
-        align(center + horizon, text(
-          font: sans-fonts, size: 9pt, style: "italic", fill: luma(150),
-          [Platzhalter für Titelbild]
-        ))
-      )
     }
   })
   // Info block
@@ -587,13 +576,11 @@
   }
   if impressum {
   v(1em)
-  styledbox(mlb-turquoise.lighten(90%),
+  styledbox(mlb-turquoise.lighten(95%),
     {
-    set text(fill: mlb-marin.lighten(25%))
+    set text(fill: mlb-marin.lighten(25%), size: 0.8em)
     set par(first-line-indent: 0em)
-    [=== Impressum]
-    [V.I.S.D.P.: Annette Kümmel.]
-    linebreak()
+    [==== Impressum]
     linebreak()
     [*Medien.Bayern GmbH* \
     Balanstr. 73 / Haus 11 \
@@ -601,8 +588,11 @@
     himedia-lab.de
     \
     \
-    © MEDIA LAB BAYERN ]
+    © MEDIA LAB BAYERN ] 
     date.display("[year]")
+    linebreak()
+    linebreak()
+    [V.I.S.D.P.: Annette Kümmel.]
     linebreak()
     linebreak()
     [Das Media Lab Bayern eine ist Initiavite der Medien.Bayern GmbH und wird gefördert durch die Bayerische Landeszentrale für neue Medien und die Bayerische Staatskanzlei.]

@@ -2,7 +2,7 @@
 
 #show: template.with(
   title: [A naïve discourse on automation],
-  shorttitle: [],
+  shorttitle: [A naïve discourse on automation],
   subtitle: [],
   authors: (
     (
