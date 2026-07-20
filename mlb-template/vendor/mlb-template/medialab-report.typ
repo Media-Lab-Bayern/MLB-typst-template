@@ -261,12 +261,6 @@
   show par: set par(
     spacing: 0.65em
   )
-  show image: img => box(
-    radius: 8pt,
-    clip: true,
-    fill: luma(250),
-    img
-  )
 
   // === Frontmatter ===
   let kickerblock(category, date, document-number) = wideblock({
