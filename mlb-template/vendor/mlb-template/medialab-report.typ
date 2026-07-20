@@ -27,6 +27,7 @@
 
 // == TEMPLATE ==
 #let template(
+  language: none,
   title: [Report Title],
   shorttitle: none,
   subtitle: none,
@@ -258,6 +259,15 @@
     }
   )
 
+  set text(
+    font: sans-fonts,
+    style: "normal",
+    weight: "regular",
+    hyphenate: true,
+    size: 11pt,
+    lang: language,
+    smartquotes: true
+  )
   set par(
     justify: false,
     leading: 0.65em,

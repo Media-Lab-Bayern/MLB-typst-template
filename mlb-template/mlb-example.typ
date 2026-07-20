@@ -1,6 +1,7 @@
 #import "vendor/mlb-template/medialab-report.typ": *
 
 #show: template.with(
+  language: "en",
   title: [A naïve discourse on automation],
   shorttitle: [A naïve discourse on automation],
   subtitle: [],
@@ -17,9 +18,7 @@
   category: "Lab Report",
   tags: ("Research","Artificial Intelligence"),
   document-number: [Version 1.1],
-  abstract: [This is a summary of my MA thesis, \"Between Hype and Practice: AI as a professional object at German media events.\"
-
-  The thesis argues that professional discourse around 'AI' at journalism conferences does not just passively describe technological change but actively shapes it. Through dominant modes of \"loud\" futuring—where AI is framed as inevitable, urgent, and transformative—these events narrow the space of possible futures and channel adoption along managerial and tech-deterministic lines. At the same time, more exploratory and critical perspectives remain marginalised or structurally excluded.],
+  abstract: [Professional discourse around 'AI' at journalism conferences does not just passively describe technological change but actively shapes it. Through dominant modes of "loud" futuring—where AI is framed as inevitable, urgent, and transformative—these events narrow the space of possible futures and channel adoption along managerial and tech-deterministic lines. At the same time, more exploratory and critical perspectives remain marginalised or structurally excluded.],
   publisher: [],
   distribution: [Please, don't distribute this document without permission.],
   impressum: true,
@@ -36,7 +35,8 @@ This is a summary of my MA thesis, "Between Hype and Practice: AI as a professio
 The thesis argues that professional discourse around 'AI' at journalism conferences does not just passively describe technological change but actively shapes it. Through dominant modes of "loud" futuring—where AI is framed as inevitable, urgent, and transformative—these events narrow the space of possible futures and channel adoption along managerial and tech-deterministic lines. At the same time, more exploratory and critical perspectives remain marginalised or structurally excluded.
 
 Drawing on six months of fieldwork, interviews, and an analysis of conference programs, the study shows how certain expectations about AI are publicly performed, circulated, and stabilised. In doing so, it highlights how journalism's adaptation to AI is guided less by technical necessity than by a constrained and uneven discourse.
-
+#linebreak()
+#linebreak()
 For questions or comments, please feel free to reach out.
 
 #pagebreak()
