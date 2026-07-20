@@ -261,14 +261,14 @@
   show par: set par(
     spacing: 0.65em
   )
+  show image: img => box(
+    radius: 8pt,
+    clip: true,
+    fill: luma(250),
+    img
+  )
 
-  // ------------------------------------------------------------
-  // Frontmatter
-  // ------------------------------------------------------------
-
-  // Kicker line — mirrors the blog's small eyebrow line above the
-  // headline (e.g. "Abschlussarbeiten im Media Lab | 27.06.2026").
-  // This is one of the few places the brand teal is used.
+  // === Frontmatter ===
   let kickerblock(category, date, document-number) = wideblock({
     image(
             "../../../assets/logos/MLB-1-line.svg",
