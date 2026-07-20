@@ -496,15 +496,6 @@
   pagebreak()
   if toc {tocblock()}
 
-  // Body text
-  set text(
-    font: sans-fonts,
-    style: "normal",
-    weight: "regular",
-    hyphenate: true,
-    size: 11pt
-  )
-
   doc
 
   // ------------------------------------------------------------
