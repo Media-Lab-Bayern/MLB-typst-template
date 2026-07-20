@@ -259,6 +259,7 @@
     }
   )
 
+  // Set default text and paragraph styles for the body of the report
   set text(
     font: sans-fonts,
     style: "normal",
