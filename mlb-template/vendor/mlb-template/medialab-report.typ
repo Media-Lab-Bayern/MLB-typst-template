@@ -1,5 +1,8 @@
 #import "drafting.typ": *
 
+// == LAYOUT ==
+#let margin-right = 8cm
+
 // == BRAND ==
 
 #let wideblock(content) = block(width:100%+2.5in,content)
@@ -110,7 +113,7 @@
   // Tables and figures
   show figure: set figure.caption(separator: [.#h(0.5em)])
   show figure.caption: set align(left)
-  show figure.caption: set text(font: sans-fonts)
+  show figure.caption: set text(font: sans-fonts, size: 0.75em, fill: mlb-turquoise)
 
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.where(kind: table): set figure(numbering: "I")
@@ -159,12 +162,13 @@
 
   // Page setup
   set page(
-    paper: "us-letter",
+    paper: "a4",
+    columns: 1,
     margin: (
-      left: 1in,
-      right: 3.5in,
-      top: 1in,
-      bottom: 1in
+      left: 2cm,
+      right: margin-right,
+      top: 2.5cm,
+      bottom: 2.5cm,
     ),
     header: context {
       if counter(page).get().first() > 1 {
@@ -178,7 +182,14 @@
               size: 8pt,
               tracking: 0.02em,
             )[
-              #if document-number != none { upper(document-number) }
+              #if document-number != none { 
+                box(
+                  stroke: 0.6pt + mlb-turquoise,
+                  inset: (x: 9pt, y: 4pt),
+                  radius: 999pt,
+                  text(size: 0.75em, upper(document-number)),
+                ) 
+                }
               #h(1em)
               #if shorttitle != none { upper(shorttitle) } else { upper(title) }
               #if publisher != none {
@@ -198,7 +209,7 @@
     footer: context {
       let pagenum = counter(page).get().first()
       box(
-        width: 100% + 3.5in - 1in,
+        width: 100% + margin-right - 2cm,
         {
           set text(fill: mlb-turquoise, font: sans-fonts, size: 8pt)
           if pagenum == 1 {
@@ -605,12 +616,12 @@ Takes 2 optional keyword and 1 required argument:
     notecounter.step()
     text(weight:"regular",fill:sidenote-number-color,super(context notecounter.display()))
   }
-  text(size:9pt,font: sans-fonts,fill:sidenote-color,{
+  text(size:0.75em,font: sans-fonts,fill:sidenote-color,{
     show emph: it => smallcaps(text(style: "normal", it.body))
     box(move(dy: sidenote-lift, margin-note(if numbered {
-      text(weight:"regular",font:sans-fonts,size:11pt,fill:sidenote-number-color,{
-        super(context notecounter.display())
-        text(size: 9pt, " ")
+      text(weight:"regular",font:sans-fonts,size:0.75em,fill:sidenote-number-color,{
+        context notecounter.display()
+        h(1em, weak: true)
       })
       content
     } else {
@@ -618,9 +629,9 @@ Takes 2 optional keyword and 1 required argument:
       ,dy:dy,
       stroke: none,
       side: right,
-      margin-right: 2.35in,
-      margin-left: 1.35in,
-      page-width: 4in,
+      margin-right: margin-right - 2cm,
+      margin-left: margin-right - 4cm,
+      page-width: margin-right + 2cm,
       page-offset-x: 0in,
     )))
   })

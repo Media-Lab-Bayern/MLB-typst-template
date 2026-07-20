@@ -89,7 +89,7 @@ Expectations, of course, are not static but can change. Early expectations towar
 
 === Loud and quiet futuring on stage
 
-With that out of the way, let's turn to how people at the conferences I visited discussed the future of 'AI' in journalism. Generally speaking, I observed two modes or registers of futuring: _loud_ and _quiet_.#note(dy:25em)[I leaned on the fieldwork of Andreas Hepp on the ways Bay Area 'AI' groups talked about the future.
+With that out of the way, let's turn to how people at the conferences I visited discussed the future of 'AI' in journalism. Generally speaking, I observed two modes or registers of futuring: _loud_ and _quiet_.#note(dy:28em)[I leaned on the fieldwork of Andreas Hepp on the ways Bay Area 'AI' groups talked about the future.
 #linebreak()
 #linebreak()
 _Hepp, A._ (2026). #link("https://doi.org/10.1177/01634437261454515")[The imaginative landscape of AI: Locating Silicon Valley's "quiet futuring"]. Media, Culture & Society.]
@@ -131,10 +131,11 @@ Instead, their knowledge was mainly limited to the visible parts of these system
 
 Across all conferences, stage access followed a clear hierarchy. Executives and technical experts dominated the programs, and a subset of these speakers reappeared with striking regularity: of the 489 speakers, 35 (7%) appeared more than 3 times.
 
-#figure(
+#wideblock(
+figure(
   image("/assets/Number of Stage Appearances Graph 2.png"),
   caption:[The number of appearances of speakers across all conferences.]
-)
+))
 
 The existence of this vanguard group#note[_Hilgartner, S._ (2015). Capturing the Imaginary: Vanguards, visions and the synthetic biology revolution. In Science and Democracy. Routledge.] is not surprising. 'AI' remains a quick moving field, which makes it difficult for conference organisers to gauge expertise. Instead they have to rely on proxies, such as the already established prominence of people in the 'AI' discourse. It is ultimately (re-)produced by the curatorial practices of conference organisers.#note(dy:-1em)[It is worth noting, that the audience does not uncritically listen to this group. I had people describe some of these speakers to me as "dogmatic", even "NPCs" that leave their teams out dry to stand on stages.]
 
@@ -206,7 +207,7 @@ The limited diversity of speakers and, especially, the absence of people with HC
 
 = The datafication and liquidation of journalism
 
-It is thus not surprising that thinking with 'AI' leads to thinking about data, especially input data. While some use cases presented were interesting (such as helping with newsroom planning based on local council minutes), others were ethically fraught, such as automatically generating articles from police reports.#note[Giving PR departments of police units uncontrolled access to reporting is, in my opinion, way beyond what should be considered a reasonable use case, even though human police reporting is also not always up to journalism's own normative standards.] This datafication also extends inwards. The archive of news organisations is recast as a data pool that automated systems will draw from.
+It is thus not surprising that thinking with 'AI' leads to thinking about data, especially input data. While some use cases presented were interesting (such as helping with newsroom planning based on local council minutes), others were ethically fraught, such as automatically generating articles from police reports.#note(dy: -3em)[Giving PR departments of police units uncontrolled access to reporting is, in my opinion, way beyond what should be considered a reasonable use case, even though human police reporting is also not always up to journalism's own normative standards.] This datafication also extends inwards. The archive of news organisations is recast as a data pool that automated systems will draw from.
 
 Some people imagine a future where AI doesn't just help write articles, but replaces the article itself—breaking journalism down into raw facts that get reassembled differently for each reader.
 
