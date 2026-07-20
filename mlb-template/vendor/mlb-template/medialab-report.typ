@@ -52,6 +52,7 @@
   contact: true,
   toc: none,
   author-bio: none, // dict: (name: "...", bio: "...", image: none) — closing "Artikel geschrieben von" note; image is optional, a rounded placeholder is drawn if omitted
+  impressum: true,
   bib: none,
   footer-content: none,
   doc
@@ -167,16 +168,31 @@
     ),
     header: context {
       if counter(page).get().first() > 1 {
-        text(fill: mlb-turquoise, font: sans-fonts, size: 8pt, tracking: 0.03em, {
-          if document-number != none {upper(document-number)}
-          h(1fr)
-          if shorttitle != none {upper(shorttitle)} else {upper(title)}
-          if publisher != none {
-            linebreak()
-            h(1fr)
-            upper(publisher)
-          }
-        })
+        grid(
+          columns: (1fr, auto),
+          align: (left + top, right + top),
+          [
+            #text(
+              fill: mlb-turquoise,
+              font: sans-fonts,
+              size: 8pt,
+              tracking: 0.02em,
+            )[
+              #if document-number != none { upper(document-number) }
+              #h(1fr)
+              #if shorttitle != none { upper(shorttitle) } else { upper(title) }
+              #if publisher != none {
+                linebreak()
+                upper(publisher)
+              }
+            ],
+          ],
+          image(
+            "../../../assets/logos/MLB-1-line.svg",
+            width: 0.8in,
+            fit: "contain",
+          ),
+        )
       }
     },
     footer: context {
@@ -259,24 +275,12 @@
   // headline (e.g. "Abschlussarbeiten im Media Lab | 27.06.2026").
   // This is one of the few places the brand teal is used.
   let kickerblock(category, date, document-number) = wideblock({
-    if category != none or date != none {
-      text(
-        font: sans-fonts,
-        size: 9pt,
-        fill: mlb-turquoise,
-        tracking: 0.05em,
-        {
-          if category != none {upper(category)}
-          if category != none and date != none {[ #sym.dot.c ]}
-          if date != none {date.display("[day].[month].[year]")}
-          if document-number != none {
-            [ #sym.dot.c ]
-            upper(document-number)
-          }
-        }
-      )
-      v(0.6em)
-    }
+    image(
+            "../../../assets/logos/MLB-1-line.svg",
+            width: 2in,
+            fit: "contain",
+          )
+    v(1em)
   })
 
   let titleblock(title: none, subtitle: none) = wideblock({
@@ -299,12 +303,6 @@
       }
     })
 
-  // Thin rule under the title block — the other place the brand
-  // teal is used, echoing the clean dividers on the blog.
-
-
-  // Topic tags — fully rounded pills matching the blog's topic
-  // labels (e.g. "Journalismus", "New Work", "Strategie").
   let tagsblock(tags) = wideblock({
     if tags.len() > 0 {
       v(0.8em)
@@ -347,50 +345,72 @@
       )
     }
   })
+  // Info block
+  let infoblock(category, date, document-number) = wideblock({
+    if category != none or date != none {
+          h(16pt)
+          text(
+            font: sans-fonts,
+            size: 0.6em,
+            fill: mlb-turquoise,
+            tracking: 0.05em,
+            {
+              if category != none {upper(category)}
+              if category != none and date != none {[ #sym.dot.c ]}
+              if date != none {date.display("[day].[month].[year]")}
+              if document-number != none {
+                [ #sym.dot.c ]
+                upper(document-number)
+              }
+            }
+          )
+        }
+      })
+
   // Author blocks
-let authorblock(authors, columns) = wideblock({
-  set text(font: sans-fonts, size: 0.8em)
-  v(0em)
-  box(
-    fill: mlb-turquoise.lighten(90%),
-    radius: 8pt,
-    inset: (x: 16pt, y: 14pt),
-    {
-      if authors.len() == 1 {
-        text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Author])
-      } else {
-        text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Authors])
-      }
-      v(0.8em)
-      for i in range(calc.ceil(authors.len() / columns)) {
-        let end = calc.min((i + 1) * columns, authors.len())
-        let is-last = authors.len() == end
-        let slice = authors.slice(i * columns, end)
-        grid(
-          columns: slice.len() * (1fr,),
-          gutter: 1em,
-          align: (top, top),
-          ..slice.map(author => align(left, {
-            strong(author.name)
-            if "role" in author [
-              \ #author.role
-            ]
-            if "organization" in author [
-              \ #author.organization
-            ]
-            if "email" in author [
-              \ #author.email
-            ]
-            v(0.5em, weak: false)
-          }))
-        )
-        if not is-last {
-          v(16pt, weak: true)
+  let authorblock(authors, columns) = wideblock({
+    set text(font: sans-fonts, size: 0.8em)
+    v(0em)
+    box(
+      fill: mlb-turquoise.lighten(90%),
+      radius: 8pt,
+      inset: (x: 16pt, y: 14pt),
+      {
+        if authors.len() == 1 {
+          text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Author])
+        } else {
+          text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Authors])
+        }
+        v(0.8em)
+        for i in range(calc.ceil(authors.len() / columns)) {
+          let end = calc.min((i + 1) * columns, authors.len())
+          let is-last = authors.len() == end
+          let slice = authors.slice(i * columns, end)
+          grid(
+            columns: slice.len() * (1fr,),
+            gutter: 1em,
+            align: (top, top),
+            ..slice.map(author => align(left, {
+              strong(author.name)
+              if "role" in author [
+                \ #author.role
+              ]
+              if "organization" in author [
+                \ #author.organization
+              ]
+              if "email" in author [
+                \ #author.email
+              ]
+              v(0.5em, weak: false)
+            }))
+          )
+          if not is-last {
+            v(16pt, weak: true)
+          }
         }
       }
-    }
-  )
-})
+    )
+  })
 
   // Closing contact field — always appended at the very end of the
   // report (after references, if any), showing each author's name
@@ -485,10 +505,14 @@ let authorblock(authors, columns) = wideblock({
         abstractblock(abstract)
       },
       {
-        authorblock(authors, 1)
+        box(width: 100%, {
+          authorblock(authors, 2)
+          infoblock(category, date, document-number)
+        })
       }
     )
   } else {
+    infoblock(category, date, document-number)
     authorblock(authors, 2)
   }
   pagebreak()
@@ -560,6 +584,30 @@ let authorblock(authors, columns) = wideblock({
   }
   if contact {
   contactblock(authors)
+  }
+  if impressum {
+  v(1em)
+  styledbox(mlb-turquoise.lighten(90%),
+    {
+    set text(fill: mlb-marin.lighten(25%))
+    set par(first-line-indent: 0em)
+    [=== Impressum]
+    [V.I.S.D.P.: Annette Kümmel.]
+    linebreak()
+    linebreak()
+    [*Medien.Bayern GmbH* \
+    Balanstr. 73 / Haus 11 \
+    81541 München \
+    himedia-lab.de
+    \
+    \
+    © MEDIA LAB BAYERN ]
+    date.display("[year]")
+    linebreak()
+    linebreak()
+    [Das Media Lab Bayern eine ist Initiavite der Medien.Bayern GmbH und wird gefördert durch die Bayerische Landeszentrale für neue Medien und die Bayerische Staatskanzlei.]
+    }
+  )
   }
 }
 

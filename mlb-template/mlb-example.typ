@@ -22,10 +22,11 @@
   The thesis argues that professional discourse around 'AI' at journalism conferences does not just passively describe technological change but actively shapes it. Through dominant modes of \"loud\" futuring—where AI is framed as inevitable, urgent, and transformative—these events narrow the space of possible futures and channel adoption along managerial and tech-deterministic lines. At the same time, more exploratory and critical perspectives remain marginalised or structurally excluded.],
   publisher: [],
   distribution: [Please, don't distribute this document without permission.],
+  impressum: true,
   toc: true,
   footer-content: ([],[]),
-  contact: true,
-  draft: true,
+  contact: false,
+  draft: false,
 )
 
 = A naïve discourse on automation
