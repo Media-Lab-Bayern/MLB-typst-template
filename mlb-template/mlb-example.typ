@@ -3,8 +3,8 @@
 #show: template.with(
   language: "en",
   title: [A naïve discourse on automation],
-  shorttitle: [A naïve discourse on automation],
-  subtitle: [Ich bin ein Untertitel],
+  shorttitle: [],
+  subtitle: [],
   authors: (
     (
       name: "Johannes Klingebiel",
