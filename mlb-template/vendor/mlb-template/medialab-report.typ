@@ -482,7 +482,7 @@
   let abstractblock(abstract) = styledbox(mlb-turquoise.lighten(90%), {
       set text(font: sans-fonts)
       set par(first-line-indent: 0em)
-      text(size: 0.64em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Abstract])
+      text(size: 0.64em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Zusammenfassung])
       v(0.8em)
       abstract
     })
