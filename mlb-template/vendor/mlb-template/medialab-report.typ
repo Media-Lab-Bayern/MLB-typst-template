@@ -496,19 +496,20 @@
     text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Inhaltsverzeichnis])
     v(0.8em)
 
-    let sections = query(heading.where(level: 1))
+    let sections = query(heading)
     for (i, it) in sections.enumerate() {
       let pagenum = counter(page).at(it.location()).first()
-      link(it.location(), grid(
-        columns: (auto, 1fr, auto),
-        column-gutter: 0.4em,
-        align: (left + horizon, horizon, right + horizon),
-        it.body,
-        box(width: 1fr, repeat(text(fill: luma(180), size: 8pt)[.])),
-        text(fill: mlb-turquoise, str(pagenum))
-      ))
-      if i < sections.len() - 1 {
-      }
+
+      pad(left: (it.level - 1) * 1em)[
+        #link(it.location(), grid(
+          columns: (auto, 1fr, auto),
+          column-gutter: 0.4em,
+          align: (left + horizon, horizon, right + horizon),
+          it.body,
+          box(width: 1fr, repeat(text(fill: luma(180), size: 8pt)[.])),
+          text(fill: mlb-turquoise, str(pagenum))
+        ))
+      ]
     }
     v(3em, weak: true)
   })
