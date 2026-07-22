@@ -15,7 +15,7 @@
   ),
   cover: read("/assets/cover.jpg", encoding: none), // path to a cover/title image; if omitted, a placeholder frame is drawn (like the blog's title image space)
   contact-img: read("/assets/author.jpg", encoding: none), // path to an author image; if omitted, a placeholder frame is drawn (like the blog's author image space)
-  category: "Lab Report",
+  category: "Case Study",
   tags: ("Research","Artificial Intelligence"),
   document-number: [Version 1.1],
   abstract: [Im Media Innovation Traineeship des Media Lab Bayern verbrachte Jonathan Pieper sechs Monate in der Redaktion von Utopia, Deutschlands einflussreichster Medienmarkte für Nachhaltigkeit. Dort arbeitete er an der Distribution, Vermarktung sowie an der inhaltlichen und strategischen Weiterentwicklung von „Utopia – Dein Podcast für Nachhaltigkeit“.],
