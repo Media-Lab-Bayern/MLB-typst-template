@@ -4,7 +4,7 @@
   language: "en",
   title: [A naïve discourse on automation],
   shorttitle: [A naïve discourse on automation],
-  subtitle: [],
+  subtitle: [Ich bin ein Untertitel],
   authors: (
     (
       name: "Johannes Klingebiel",
@@ -23,11 +23,11 @@
   distribution: [All rights reserved.],
   impressum: true,
   toc: true,
-  contact: false,
+  contact: true,
   draft: false,
 )
 
-= A naïve discourse on automation
+= Executive Summary: A naïve discourse on automation
 
 This is a summary of my MA thesis, "Between Hype and Practice: AI as a professional object at German media events."#note[Because I promised anonymity to some of the people I interviewed, the thesis will remain unpublished.]
 
@@ -68,7 +68,7 @@ Over time, email became one tool among many, used strategically depending on the
 
 This is what is meant by "negotiation": the technology didn't simply change journalism on its own. Instead, journalists adjusted how they used the technology to align with their existing professional values, such as accuracy, independence, and credibility.
 
-Despite this, journalists tend to view technological change as a deterministic force over which they have little say. I want to emphasise that this is a _myth_, that is empirically untenable.#note(dy:-5em)[This idea is generally referred to as _technological determinism_.
+Despite this, journalists tend to view technological change as a deterministic force over which they have little say. I want to emphasise that this is a _myth_, that is empirically untenable.#note(dy:-8em)[This idea is generally referred to as _technological determinism_.
 #linebreak()
 #linebreak()
 _Örnebring, H._ (2010). #link("https://doi.org/10.1177/1464884909350644")[Technology and journalism-as-labour: Historical perspectives]. Journalism, 11(1), 57–74.]
@@ -186,6 +186,7 @@ _Scale_, on the other hand, has a different lineage. As a core value, it is foun
 
 It is thus worth noting what was seldom promised on stage: qualitatively better journalism. This is not to say that _speed_ and _scale_ cannot be indicators of quality or that there aren't challenges that align particularly well with these values, but that this kind of distinction was never made. Similarly, while speakers discussed _efficiency_ at length, _effectiveness_ remained an underexplored, but in my opinion, important avenue for 'AI' use.
 
+#pagebreak()
 = Humans in loops
 
 What then is the journalist's new place in automated systems? Here, more than on any other topic, we can see the clearest negotiation around 'AI'. Multiple speakers and showcases ensured that a journalist remained the final authority over a piece to be published. A gatekeeper, either as a legal necessity, as a final check to ensure factual correctness, or to defend against potential internal headwind.
@@ -207,6 +208,7 @@ The product of journalism is, in other words, not just a piece of content, but a
 
 The limited diversity of speakers and, especially, the absence of people with HCI or automation expertise, resulted in a very narrow understanding of how automated systems were to be built and monitored.
 
+#pagebreak()
 = The datafication and liquidation of journalism
 
 It is thus not surprising that thinking with 'AI' leads to thinking about data, especially input data. While some use cases presented were interesting (such as helping with newsroom planning based on local council minutes), others were ethically fraught, such as automatically generating articles from police reports.#note(dy: -5em)[Giving PR departments of police units uncontrolled access to reporting is, in my opinion, way beyond what should be considered a reasonable use case, even though human police reporting is also not always up to journalism's own normative standards.] This datafication also extends inwards. The archive of news organisations is recast as a data pool that automated systems will draw from.
@@ -219,6 +221,7 @@ The article, whatever its limitations, functions as a unit of authorship and thu
 
 Arguably, this kind of vision can also be read in the context of 'AI' as an inevitable, epochal shift. This expectation, then, necessitates a similar epochal reimagining of journalism itself. It should be noted that, here again, the unasked question on stage (and off stage) was _whether_ that future is desirable. Instead, where people argued for it, it was similarly seen as inevitable.
 
+#pagebreak()
 = A final note
 The field of journalism has imported a substantial vocabulary and corresponding logics from software engineering and automation research. What it has not imported, at least on the stages I examined, is the critical lineage from which these terms originally arose. Whether this is by design or by accident is not a question my thesis can answer, and I do not think it needs to be answered for my argument to hold, as the effect is the same either way.
 

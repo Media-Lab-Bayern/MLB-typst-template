@@ -282,6 +282,37 @@
     spacing: 0.65em
   )
 
+  // === Title Pages ===
+
+  let titlepage(title, subtitle, category, date, document-number, tags, cover, authors) = {
+    set text(fill: white)
+    box(width: 100% + 2.5in, height: 100%, fill: mlb-turquoise, radius: 18pt, {
+      pad(x: 10pt, y: 10pt, {
+        set par(spacing: 0pt)
+        set block(spacing: 0pt)
+        if cover != none {
+          box(width: 100%, height: 10cm, radius: 8pt, clip: true,
+            image(cover, width: 100%, height: 10cm, fit: "cover"))
+          v(7em, weak: true)
+        }
+        if category != none {
+          set par(first-line-indent: 0pt, spacing: 0em)
+          text(font: sans-fonts, size: 9pt, fill: white, tracking: 0.08em, upper(category))
+          v(3em, weak: true)
+        }
+        set text(hyphenate: false, size: 7em, font: heading-fonts, weight: "regular", fill: white)
+        set par(leading: 0.15em, first-line-indent: 0pt)
+        title
+        linebreak()
+        v(0.5em, weak: true)
+        if subtitle != none {
+          set text(size: 0.2em, font: sans-fonts, fill: mlb-calming-blue)
+          subtitle
+        }
+      })
+    })
+  }
+
   // === Frontmatter ===
 
   let titleblock(title: none, subtitle: none) = wideblock({
@@ -412,13 +443,11 @@
   v(2em, weak: true)
   set par(first-line-indent: 0em)
   box(
-    width: 90%,
+    width: 75%,
     fill: mlb-yellow,
     radius: 8pt,
-    inset: (x: 16pt, y: 14pt),
+    inset: (x: 8pt, y: 8pt),
     {
-      text(font: sans-fonts, size: 8pt, fill: mlb-marin, tracking: 0.05em, strong(upper[Kontakt]))
-      v(0.6em)
       grid(
         columns: (100pt, 1fr),
         gutter: 2em,
@@ -430,6 +459,9 @@
           image(contact-img, width: 100pt, height: 100pt, fit: "cover")
         ),
         {
+          v(0.3em,weak: false)
+          text(font: sans-fonts, size: 8pt, fill: mlb-marin, tracking: 0.05em, strong(upper[Kontakt]))
+          v(0.6em, weak: false)
           text(font: sans-fonts, size: 1.2em, weight: "bold", author.name)
           if "role" in author and author.at("role") != none [
             #linebreak()
@@ -480,11 +512,12 @@
     }
     v(3em, weak: true)
   })
+  titlepage(title, subtitle, category, date, document-number, tags, cover, authors)
 
-  titleblock(title: title, subtitle: subtitle)
-  tagsblock(tags)
-  coverimageblock(cover)
-  v(1.5em, weak: true)
+  //titleblock(title: title, subtitle: subtitle)
+  //tagsblock(tags)
+  //coverimageblock(cover)
+  //v(1.5em, weak: true)
   if abstract != none {
     grid(
       columns: (0.5fr, 0.1fr),
@@ -504,8 +537,11 @@
     authorblock(authors, 2)
     infoblock(category, date, document-number)
   }
+  if toc {
+    v(3em, weak: false)
+    tocblock()
+  }
   pagebreak()
-  if toc {tocblock()}
 
   doc
 
@@ -563,6 +599,7 @@
     bib
   }
   if contact {
+  v(4em, weak: true)
   contactblock(authors)
   }
   if impressum {
