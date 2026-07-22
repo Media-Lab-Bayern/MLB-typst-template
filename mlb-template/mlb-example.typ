@@ -13,7 +13,7 @@
       email: "johannes.klingebiel@gmail.com"
     ),
   ),
-  cover: read("/assets/emily-irene-photo-co-2u39conwD1I-unsplash.jpg", encoding: none), // path to a cover/title image; if omitted, a placeholder frame is drawn (like the blog's title image space)
+  cover: read("/assets/cover.jpg", encoding: none), // path to a cover/title image; if omitted, a placeholder frame is drawn (like the blog's title image space)
   contact-img: read("/assets/IMG_7382-klein.jpg", encoding: none), // path to an author image; if omitted, a placeholder frame is drawn (like the blog's author image space)
   category: "Lab Report",
   tags: ("Research","Artificial Intelligence"),

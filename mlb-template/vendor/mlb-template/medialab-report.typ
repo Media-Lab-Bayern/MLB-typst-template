@@ -209,7 +209,7 @@
         )
       } else {
         image(
-            "../../../assets/logos/MLB-1-line.svg",
+            "../../../assets/logos/MLB-1-line-white.svg",
             width: 6cm,
             fit: "contain",
           )
@@ -255,14 +255,10 @@
     },
     background: context {
       let pagenum = counter(page).get().first()
-      //if pagenum == 1 {
-       // rect(width: 100%, height: 100%, fill: mlb-marin)
-      //}
       if draft {
         rotate(45deg, text(font: sans-fonts, size: 200pt, fill: rgb("FFEEEE"))[DRAFT])
       }
-    }
-  )
+})
 
   // Set default text and paragraph styles for the body of the report
   set text(
@@ -286,14 +282,16 @@
 
   let titlepage(title, subtitle, category, date, document-number, tags, cover, authors) = {
     set text(fill: white)
-    box(width: 100% + 2.5in, height: 100%, fill: mlb-turquoise, radius: 18pt, {
-      pad(x: 10pt, y: 10pt, {
+    set page(fill:mlb-turquoise)
+    wideblock({
+    box(width: 100%, height: 100%, fill: mlb-turquoise, radius: 18pt, {
+      pad(x: 0pt, y: 20pt, {
         set par(spacing: 0pt)
         set block(spacing: 0pt)
         if cover != none {
-          box(width: 100%, height: 10cm, radius: 8pt, clip: true,
-            image(cover, width: 100%, height: 10cm, fit: "cover"))
-          v(7em, weak: true)
+          box(width: 100%, height: 14cm, radius: 8pt, clip: true,
+            image(cover, width: 100%, height: 14cm, fit: "cover"))
+          v(5em, weak: true)
         }
         if category != none {
           set par(first-line-indent: 0pt, spacing: 0em)
@@ -310,6 +308,7 @@
           subtitle
         }
       })
+    })
     })
   }
 
