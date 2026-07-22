@@ -33,7 +33,9 @@ This is a summary of my MA thesis, "Between Hype and Practice: AI as a professio
 
 The thesis argues that professional discourse around 'AI' at journalism conferences does not just passively describe technological change but actively shapes it. Through dominant modes of "loud" futuring—where AI is framed as inevitable, urgent, and transformative—these events narrow the space of possible futures and channel adoption along managerial and tech-deterministic lines. At the same time, more exploratory and critical perspectives remain marginalised or structurally excluded.
 
-Drawing on six months of fieldwork, interviews, and an analysis of conference programs, the study shows how certain expectations about AI are publicly performed, circulated, and stabilised. In doing so, it highlights how journalism's adaptation to AI is guided less by technical necessity than by a constrained and uneven discourse.
+Drawing on six months of fieldwork, interviews, and an analysis of conference programs, the study shows how certain expectations about AI are publicly performed, circulated, and stabilised. In doing so, it highlights how journalism's adaptation to AI is guided less by technical necessity than by a constrained and uneven discourse.#explainer(dy:-7em)[*Methodology*
+#linebreak()
+I combined a number of different methods: Multi-side ethnography at 5 conferences, 6 interviews with speakers, attendees and organisers, as well as data-analysis of 22 conference schedules.]
 #linebreak()
 #linebreak()
 For questions or comments, please feel free to reach out.

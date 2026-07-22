@@ -657,3 +657,64 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
     )
   }
 }
+
+// == EXPLAINER ==
+
+#let explainer(dy: auto, content) = {
+  box(move(dy: sidenote-lift, margin-note(
+    box(
+      width: 100%,
+      fill: gray.lighten(90%),
+      radius: 8pt,
+      inset: (x: 12pt, y: 10pt),
+      {
+        text(size: 0.75em, content)
+      }
+    ),
+    dy: dy,
+    stroke: none,
+    side: right,
+    margin-right: margin-right - 2cm,
+    margin-left: margin-right - 4cm,
+    page-width: margin-right + 2cm,
+    page-offset-x: 0in,
+  )))
+}
+
+// == Pullquotes ==
+
+#let marginquote(attribution: none, dy: auto, content) = {
+  box(move(dy: sidenote-lift, margin-note(
+    {
+      set text(font: heading-fonts, size: 1.3em, hyphenate: false, weight: "regular", fill: mlb-turquoise)
+      set par(leading: 0.4em, first-line-indent: 0pt)
+      content
+      if attribution != none {
+        v(0.4em)
+        text(font: sans-fonts, size: 8pt, weight: "regular", fill: sidenote-color, upper(attribution))
+      }
+    },
+    dy: dy,
+    stroke: none,
+    side: right,
+    margin-right: margin-right - 2cm,
+    margin-left: margin-right - 4cm,
+    page-width: margin-right + 2cm,
+    page-offset-x: 0in,
+  )))
+}
+
+#let pullquote(attribution: none, content) = wideblock({
+  v(1.5em, weak: true)
+  set text(font: heading-fonts, size: 2em, weight: "regular", fill: mlb-marin)
+  set par(leading: 0.3em, first-line-indent: 0pt, justify: false)
+  box(width: 85%, {
+    content
+  })
+  if attribution != none {
+    linebreak()
+    v(0.1em)
+    text(font: sans-fonts, size: 10pt, weight: "bold", fill: mlb-turquoise, tracking: 0.03em, attribution)
+  }
+  v(1.5em, weak: true)
+})
