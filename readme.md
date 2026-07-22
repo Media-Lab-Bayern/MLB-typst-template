@@ -6,6 +6,8 @@ Dieses Projekt stellt ein einheitliches Template zur Verfügung, mit dem wir Rep
 
 Das Template basiert auf **Typst**, einem modernen Tool zur Dokumentenerstellung (ähnlich wie Word oder LaTeX, aber einfacher und flexibler).
 
+Ein Beispiel findest du hier: [mlb-example.pdf](mlb-template/mlb-example.pdf)
+
 ## Für wen ist dieses Dokument gedacht?
 
 Dieses README richtet sich an alle im Team – auch ohne technischen Hintergrund.
