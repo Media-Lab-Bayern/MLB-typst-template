@@ -82,9 +82,9 @@
 
   // H1
   show heading.where(level: 1): it => {
-    set text(size: 1.5em, weight: "bold", fill: mlb-marin)
-    set par(leading: 0.5em)
-    block(above: 2em, below: 1.5em, it.body)
+    set text(size: 2.4em, weight: "regular", fill: mlb-marin, font: heading-fonts, features: ("ss02", "ss03"))
+    set par(leading: 0.3em)
+    block(above: 1.5em, below: 1em, it.body)
   }
 
   // H2
@@ -291,20 +291,21 @@
         if cover != none {
           box(width: 100%, height: 14cm, radius: 8pt, clip: true,
             image(cover, width: 100%, height: 14cm, fit: "cover"))
-          v(5em, weak: true)
+          v(3em, weak: true)
         }
         if category != none {
           set par(first-line-indent: 0pt, spacing: 0em)
           text(font: sans-fonts, size: 9pt, fill: white, tracking: 0.08em, upper(category))
           v(3em, weak: true)
         }
-        set text(hyphenate: false, size: 7em, font: heading-fonts, weight: "regular", fill: white)
+        set text(hyphenate: true, size: 7em, font: heading-fonts, weight: "regular", fill: white, features: ("ss02", "ss03"))
         set par(leading: 0.15em, first-line-indent: 0pt)
         title
         linebreak()
         v(0.5em, weak: true)
         if subtitle != none {
-          set text(size: 0.2em, font: sans-fonts, fill: mlb-calming-blue)
+          set par(leading: 0.8em, first-line-indent: 0pt)
+          set text(size: 0.15em, font: sans-fonts, fill: mlb-calming-blue)
           subtitle
         }
       })
@@ -399,7 +400,7 @@
         if authors.len() == 1 {
           text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Author])
         } else {
-          text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Authors])
+          text(size: 0.8em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Authoren])
         }
         v(0.8em)
         for i in range(calc.ceil(authors.len() / columns)) {
@@ -702,9 +703,10 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
       width: 100%,
       fill: gray.lighten(90%),
       radius: 8pt,
-      inset: (x: 12pt, y: 10pt),
+      inset: (x: 9pt, y: 9pt),
       {
-        text(size: 0.75em, content)
+        set text(size: 0.75em)
+        content
       }
     ),
     dy: dy,
@@ -741,16 +743,16 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
 }
 
 #let pullquote(attribution: none, content) = wideblock({
-  v(1.5em, weak: true)
-  set text(font: heading-fonts, size: 2em, weight: "regular", fill: mlb-marin)
-  set par(leading: 0.3em, first-line-indent: 0pt, justify: false)
+  v(1.5em, weak: false)
+  set text(font: sans-fonts, size: 1.5em, weight: "bold", fill: mlb-marin)
+  set par(leading: 0.6em, first-line-indent: 0pt, justify: false)
   box(width: 85%, {
     content
   })
   if attribution != none {
     linebreak()
-    v(0.1em)
+    v(0.3em, weak: false)
     text(font: sans-fonts, size: 10pt, weight: "bold", fill: mlb-turquoise, tracking: 0.03em, attribution)
   }
-  v(1.5em, weak: true)
+  v(0.5em, weak: false)
 })

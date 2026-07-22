@@ -1,24 +1,24 @@
 #import "vendor/mlb-template/medialab-report.typ": *
 
 #show: template.with(
-  language: "en",
-  title: [A naïve discourse on automation],
+  language: "de",
+  title: [Ein Podcast feiert Comeback],
   shorttitle: [],
-  subtitle: [],
+  subtitle: [Um die langfristige Relevanz zu sichern, brauchte der Podcast von Utopia eine Neuausrichtung. Trainee Jonathan Pieper analysierte die Ausgangssituation und leitete daraus konkrete Maßnahmen ab.],
   authors: (
     (
-      name: "Johannes Klingebiel",
-      role: "Design and Research Manager",
+      name: "Steffen Geggus",
+      role: "Content Strategist",
       organization: "Media Lab Bayern, Munich",
-      email: "johannes.klingebiel@gmail.com"
+      email: "steffen@media-lab.de"
     ),
   ),
   cover: read("/assets/cover.jpg", encoding: none), // path to a cover/title image; if omitted, a placeholder frame is drawn (like the blog's title image space)
-  contact-img: read("/assets/IMG_7382-klein.jpg", encoding: none), // path to an author image; if omitted, a placeholder frame is drawn (like the blog's author image space)
+  contact-img: read("/assets/author.jpg", encoding: none), // path to an author image; if omitted, a placeholder frame is drawn (like the blog's author image space)
   category: "Lab Report",
   tags: ("Research","Artificial Intelligence"),
   document-number: [Version 1.1],
-  abstract: [Professional discourse around 'AI' at journalism conferences does not just passively describe technological change but actively shapes it. Through dominant modes of "loud" futuring—where AI is framed as inevitable, urgent, and transformative—these events narrow the space of possible futures and channel adoption along managerial and tech-deterministic lines. At the same time, more exploratory and critical perspectives remain marginalised or structurally excluded.],
+  abstract: [Im Media Innovation Traineeship des Media Lab Bayern verbrachte Jonathan Pieper sechs Monate in der Redaktion von Utopia, Deutschlands einflussreichster Medienmarkte für Nachhaltigkeit. Dort arbeitete er an der Distribution, Vermarktung sowie an der inhaltlichen und strategischen Weiterentwicklung von „Utopia – Dein Podcast für Nachhaltigkeit“.],
   publisher: [],
   distribution: [All rights reserved.],
   impressum: true,
@@ -27,206 +27,162 @@
   draft: false,
 )
 
-= Executive Summary: A naïve discourse on automation
+= Executive Summary
 
-This is a summary of my MA thesis, "Between Hype and Practice: AI as a professional object at German media events."#note[Because I promised anonymity to some of the people I interviewed, the thesis will remain unpublished.]
+Im #link("https://www.media-lab.de/de/angebote/media-innovation-traineeship/")[Media Innovation Traineeship des Media Lab Bayern] verbrachte #link("https://www.linkedin.com/in/jonathan-pieper/")[Jonathan Pieper] sechs Monate in der Redaktion von Utopia, Deutschlands einflussreichster Medienmarkte für Nachhaltigkeit.
 
-The thesis argues that professional discourse around 'AI' at journalism conferences does not just passively describe technological change but actively shapes it. Through dominant modes of "loud" futuring—where AI is framed as inevitable, urgent, and transformative—these events narrow the space of possible futures and channel adoption along managerial and tech-deterministic lines. At the same time, more exploratory and critical perspectives remain marginalised or structurally excluded.
+Dort arbeitete er an der Distribution, Vermarktung sowie an der inhaltlichen und strategischen Weiterentwicklung von #link("https://utopia.de/tag/der-utopia-podcast/")[„Utopia – Dein Podcast für Nachhaltigkeit“].
 
-Drawing on six months of fieldwork, interviews, and an analysis of conference programs, the study shows how certain expectations about AI are publicly performed, circulated, and stabilised. In doing so, it highlights how journalism's adaptation to AI is guided less by technical necessity than by a constrained and uneven discourse.#explainer(dy:-7em)[*Methodology*
-#linebreak()
-I combined a number of different methods: Multi-side ethnography at 5 conferences, 6 interviews with speakers, attendees and organisers, as well as data-analysis of 22 conference schedules.]
-#linebreak()
-#linebreak()
-For questions or comments, please feel free to reach out.
+== Hintergrund
 
-#pagebreak()
+Seit 2020 produziert Utopia einen hauseigenen Podcast rund um zentrale Fragen der Nachhaltigkeit – von Energiewende und veganer Ernährung über nachhaltige Finanzen bis hin zur Mobilität der Zukunft. 
 
-= Technology adoption in journalism
-Journalism is impossible to separate from its large arsenal of tools and technological systems, from printing presses and content management systems to the more humble pen and paper. In fact, journalism has a long history of evolving with and alongside new technologies—such as the telephone, air conditioning,#note[Yes, you've read that right!] the personal computer, and the internet.#note[The historian Will Mari has written extensively on this:
-#linebreak()
-#linebreak()
-_Mari, W._ (2018). #link("https://doi.org/10.1080/1461670X.2016.1272432")[Technology in the Newsroom: Adoption of the telephone and the radio car from c. 1920 to 1960]. Journalism Studies, 19(9), 1366–1389.
-#linebreak()
-#linebreak()
-_Mari, W._ (2021). #link("https://doi.org/10.1080/17512786.2021.1919544")[Staying Cool: The Impact of Air Conditioning on News Work and the Modern Newsroom]. Journalism Practice, 17(3), 391–410.
-#linebreak()
-#linebreak()
-_Mari, W._ (2022). #link("https://doi.org/10.4324/9780429324871")[Newsrooms and the Disruption of the Internet: A Short History of Disruptive Technologies, 1990–2010] (1st edn). Routledge.]
+Nach dem Weggang der zuständigen Redakteurin fehlten jedoch die Kapazitäten und das spezifische Know-how, um das Format mit dem bisherigen Qualitätsanspruch fortzuführen. Die Streamingzahlen gingen spürbar zurück.
 
-Crucially, though, this was never a process of straightforward adoption in which journalists picked up a tool and started to use it, but a process of negotiation, in which every new piece was made to fit the logics and norms of the profession.
+== Die Arbeit im Traineeship
+Die zentrale Herausforderung zu Beginn des Traineeships: Wie lässt sich der Podcast zurück auf einen nachhaltigen Wachstumskurs bringen?
 
-When email first became common, it seemed like an obvious tool for journalists. It was fast, convenient, and allowed reporters to reach sources instantly. At first glance, it looked like journalists could switch from phone calls to email without much change.
+Jonathan übernahm unter der Leitung von Chefredakteur #link("https://www.linkedin.com/in/martin-tillich-552313243/?originalSubdomain=de")[Martin Tillich] die strategische Analyse des Formats und arbeitete aktiv an dessen Überarbeitung mit. Er reaktivierte die Creator-Tools von Spotify und Apple, schuf damit erstmals wieder eine belastbare Datenbasis und leitete daraus konkrete Maßnahmen ab: eine thematische Neuausrichtung auf die Altersgruppe der 26- bis 35-Jährigen, eine strukturelle Überarbeitung der Episoden sowie eine systematische Integration des Podcasts in den Instagram-Auftritt von Utopia.
 
-But in practice, things weren't so simple.
+== Ergebnisse
+- +30 Prozent mehr Streams
+- Steigerung der Durchhörquote von 45 auf 58 Prozent
+- Produktion der reichweitenstärksten Folge der letzten 12 Monate 
 
-Many journalists worried that email made it easier for sources—especially PR representatives—to send carefully crafted, overly polished responses instead of speaking spontaneously. This raised concerns about authenticity and transparency. As a result, some reporters began to treat email responses differently from phone interviews, often following up with calls to confirm quotes or ask more probing questions.
-
-Editors also stepped in. Some newsrooms created informal rules, like requiring reporters to verify important claims through direct conversation rather than relying solely on emailed statements. Others encouraged journalists to be cautious about quoting email responses word-for-word, since they might have been reviewed or edited by multiple people before being sent.
-
-Over time, email became one tool among many, used strategically depending on the situation, rather than a complete replacement for older practices.
-
-This is what is meant by "negotiation": the technology didn't simply change journalism on its own. Instead, journalists adjusted how they used the technology to align with their existing professional values, such as accuracy, independence, and credibility.
-
-Despite this, journalists tend to view technological change as a deterministic force over which they have little say. I want to emphasise that this is a _myth_, that is empirically untenable.#note(dy:-8em)[This idea is generally referred to as _technological determinism_.
-#linebreak()
-#linebreak()
-_Örnebring, H._ (2010). #link("https://doi.org/10.1177/1464884909350644")[Technology and journalism-as-labour: Historical perspectives]. Journalism, 11(1), 57–74.]
-
-This same process of negotiating has been repeated in the past with automated systems, which also have a long history in journalism as they moved from the production side (printing) to the newsroom in the form of digital systems.
-
-Newer systems such as the #link("https://www.latimes.com/la-me-quakebot-faq-20190517-story.html")[_LA Times_ _QuakeBot_] are built to automatically create stories, based on input data—in this case, earthquake strength and location. In more academic language, these systems are referred to as _anticipatory news infrastructures_, partly or fully automated systems pointed to where journalists expect news to occur.#note[_Ananny, M., & Finn, M._ (2020). Anticipatory news infrastructures: Seeing journalism's expectations of future publics in its sociotechnical systems. New Media & Society, 22(9), 1600–1618.] They are usually not allowed to actually publish stories but push drafts to a human editor for a final check. 
-
-I have already mentioned the fact that technologies in journalism are made to fit the logics and norms of the profession. One crucial norm, I will return to, is the understanding of journalists as gatekeepers. Or to put it more bluntly: The central aspect of the journalistic identity is that journalist get to decide what becomes _news_.
-
-#pagebreak()
-= How to speak about the future
-While 'AI' is not an entirely new technology, it is certainly one of the most evocative. The term sits somewhere between a field of computer science, a loose bundle of algorithmic methods, and science fiction. It lacks both a comprehensive definition and well-defined boundaries.
-
-It may be that this blurriness, as well as the fact that its approaches are novel and powerful, which make 'AI' such a good catalyst for expectations about the future. What does 'AI' mean for journalism? While no one has a clear answer, it is a good way of filling conference stages.
-
-Let's stay with the idea of expectations for a moment. Expectations, especially shared ones, are an important aspect of innovation work. For example, when people are convinced that artificial intelligence will transform journalism, that expectation can attract funding, encourage experimentation, shape research agendas, and influence how organisations prepare for the future—even before the technology has fully delivered on its promises. And the fact that they're doing this might, in turn, actually bring about that exact change. Expectations, in other words, work like a form of gravity, pulling people into common orbits. #note[_Borup, M., Brown, N., Konrad, K., & Van Lente, H._ (2006). #link("https://doi.org/10.1080/09537320600777002")[The sociology of expectations in science and technology]. Technology Analysis & Strategic Management, 18(3–4), 285–298.]
-
-Expectations, of course, are not static but can change. Early expectations towards a technology's impact are often grandiose, while later ones—when the technology, its capabilities and flaws are known—will be more grounded and reasonable.#note[An innovation manager I talked to mentioned explicitly how much of his job was the management of expectations inside his newsrooms, mostly correcting over-inflated ones, while being on a limited budget.] _Hype_ is one way of talking about these earlier expectations, where people might deliberately oversell and overpromise. An important aspect of hype is that grandiose claims about the future are impossible to verify in the present. You can either believe them or not, based on often spotty circumstantial evidence. Hype then—returning to the gravity metaphor—can work like a black hole, bending reality around it. #note[_Pollock, N., & Williams, R._ (2026). #link("https://doi.org/10.1017/9781009644013")[After Hype: The Business of Taming the Digital Economy]. Cambridge University Press.]
-
-=== Loud and quiet futuring on stage
-
-With that out of the way, let's turn to how people at the conferences I visited discussed the future of 'AI' in journalism. Generally speaking, I observed two modes or registers of futuring: _loud_ and _quiet_.#note(dy:-3em)[I leaned on the fieldwork of Andreas Hepp on the ways Bay Area 'AI' groups talked about the future.
-#linebreak()
-#linebreak()
-_Hepp, A._ (2026). #link("https://doi.org/10.1177/01634437261454515")[The imaginative landscape of AI: Locating Silicon Valley's "quiet futuring"]. Media, Culture & Society.]
-
-#table(
-  // columns: 5,
-  columns: (0.8fr, 1fr, 1fr, 1fr, 1fr),
-  table.header(
-    [*Term*], [*Audience*], [*Purpose*], [*Treatment of the Future*], [*Key Characteristics*],
-  ),
-  [*Loud futuring*],
-  [Broad audience],
-  [To perform expectations for alignment and legitimation],
-  [The future is presented as settled and inevitable, regardless of the actual uncertainty involved],
-  [Closer to a classic prediction than an open question; emphasizes certainty and commitment],
-
-  [*Quiet futuring*],
-  [Smaller community or in-group],
-  [To exchange expectations (often through prototypes) for coordination and sense-making],
-  [The future remains open, with uncertainty, friction, and failure treated as admissible parts of the process],
-  [Emphasizes exploration, negotiation, and shared understanding],
-)
-
-_Loud_ futuring was especially prevalent on the large stages and on panels, while _quiet_ futuring generally happened in smaller settings or off-stage.
-
-Executives and managers are generally inclined to present more big-picture, _loud_ visions. In an interview, one such speaker mentioned feeling pressured internally to present an image of success, rapid technological progress, and the importance of their work for the future. This way of speaking at conferences can also help set the agenda within organisations, as speakers can position themselves as authorities. The game here is setting and managing expectations publicly.
-
-Similarly, it is possible to design spaces for more measured and _quiet_ futuring, such as at practitioner meetups and more closed gatherings.#note[A good example here is the "AI for Media" community of practice. While not completely free from overselling and _loud_ futures, both were less prominent on stage.]
-
-Structurally, both modes of talking about the future were protected. Audience questions were either limited to the last couple of minutes of a session, if allowed at all, or pushed off-stage. Who gets to speak can set the tone without pushback.
-
-This does not mean that critical voices were not present, but they were either in the minority at panels or isolated at their own sessions, prompting one attendee to remark that he feels there are "two completely different audiences" when it comes to AI.
-
-Crucially, I want to point out here that the line between those audiences does not run between adoption of 'AI' vs non-adoption or resistance, but in how 'AI' was understood: as a managerial tool vs 'AI' as a socio-technical system with inherent power-relations.#note(dy:-4em)[For example, most of the speakers in the group discussed below did not show a deeper understanding of how AI systems are built and embedded in broader social and technical contexts.
-
-Instead, their knowledge was mainly limited to the visible parts of these systems, such as user interfaces, model benchmarks, and programming frameworks, rather than the underlying infrastructures, data practices, economical, and organisational factors that shape how AI works.]
-
-== Who gets to speak?
-
-Across all conferences, stage access followed a clear hierarchy. Executives and technical experts dominated the programs, and a subset of these speakers reappeared with striking regularity: of the 489 speakers, 35 (7%) appeared more than 3 times.
+= Der Trainee
 
 #wideblock(
-figure(
-  image("/assets/Number of Stage Appearances Graph 2.png"),
-  caption:[The number of appearances of speakers across all conferences.]
-))
+  image("/assets/trainee2.jpg", width: 100%),
 
-The existence of this vanguard group#note[_Hilgartner, S._ (2015). Capturing the Imaginary: Vanguards, visions and the synthetic biology revolution. In Science and Democracy. Routledge.] is not surprising. 'AI' remains a quick moving field, which makes it difficult for conference organisers to gauge expertise. Instead they have to rely on proxies, such as the already established prominence of people in the 'AI' discourse. It is ultimately (re-)produced by the curatorial practices of conference organisers.#note(dy:-1em)[It is worth noting, that the audience does not uncritically listen to this group. I had people describe some of these speakers to me as "dogmatic", even "NPCs" that leave their teams out dry to stand on stages.]
+)
 
-This group, then, has an outsized power to set expectations and define what the future of 'AI' in journalism could look like. Further, as interactions at conferences and interviews have shown, this group is tightly networked. This does not mean—and I don't want to imply this—that the group is deliberately presenting a certain version of the future. But it is clear that the people on stage share a surprisingly similar vision, narrowing the discourse around 'AI'. 
+Jonathan studierte Sportjournalismus und -management (Bachelor) in Nürnberg sowie Journalismus mit Schwerpunkt Innovation und Management (Master) in Eichstätt. Erste Erfahrungen in der Formatentwicklung sammelte er unter anderem als Praktikant beim ZDF. Nach seinem Traineeship beim Media Lab Bayern folgte der nächste Karriereschritt: Er wechselte zum Saarländischen Rundfunk, wo er seitdem an der Entwicklung, Weiterentwicklung und Distribution von digitalen Formaten arbeitet.
 
-It is thus even more important to note who was absent from these stages:
-- audiences themselves, present only symbolically as "users" or "target groups"
-- journalists from the newsroom floor
-- union or workers council representatives
-- legal or regulatory voices
-- HCI experts, UX designers, or practitioners with automation expertise from outside journalism.
+= Deep Dive
 
-This limited set of voices has consequences for how 'AI' is imagined and deployed.
+Vor Start des Media Innovation Traineeships befand sich Utopia mit „Der Utopia-Podcast“ (damaliger Name) in einer Phase der Unsicherheit. Für Chefredakteur Martin Tillich war (und ist) das Format ein Herzensprojekt und ein Kanal mit großem strategischen Potenzial. Doch nach internen Veränderungen stellte sich die Frage, wie der Podcast organisatorisch, inhaltlich und strategisch weitergeführt werden sollte.
 
-== Sidenote: _AI for Media_ as a pioneer community
+Nachdem die zuständige Podcast-Redakteurin – zuvor rund drei Tage pro Woche ausschließlich für das Format verantwortlich – das Unternehmen verlassen hatte, verteilte sich die Betreuung des Podcasts auf verschiedene Schultern innerhalb der Redaktion.  Das Team brachte zwar viel Erfahrung in SEO, Social Media und Publishing mit, doch in Sachen Podcast fehlten Kompetenzen. 
 
-AI for Media, co-organised by the public broadcaster Bayerischer Rundfunk and the publishing house Ippen, deserves a brief note. The group was conceived as a community of practice, bringing together practitioners to share their experiences with 'AI' and present concrete projects.
+#pullquote(attribution: "Martin Tillich", "Wir wollten unser Podcast-Wissen gezielt vertiefen und professioneller aufstellen.")
 
-It can be described as a pioneer community: a group united by the idea of being early movers, experimenting with practices they see as future-oriented. The community is shaped by a curatorial elite and acts as an intermediary between more speculative visions of the future and the broader field, helping to select and shape what becomes relevant.#note[_Hepp, A._ (2025). #link("https://doi.org/10.1177/14614448241253766")[Curators of digital futures: The life cycle of pioneer communities]. New Media & Society, 27(9).]
+*Die Folgen*:
 
-Compared to other settings, presentations at AI for Media were generally more _quiet_ in how they approached the future. Failures, uncertainty, and open discussion were encouraged.#note[This was partly the result of the gathering of what attendees understood as a well-meaning in-group, as well as formats such as the "Problem Pitch", in which challenges and work-in-progress projects were presented, asking the audience for help.] This does not mean that _loud_ futuring was absent. In particular, welcome talks—which linked each meetup topic to a broader vision of its future relevance—and presentations by founders often advanced more narrow and assertive visions of the future.
-#pagebreak()
-= The inevitability and urgency of 'AI'
+- Die Veröffentlichungen wurden unregelmäßiger,
+- die thematische Ausrichtung verlor an Klarheit,
+- das Konzept begann zu verwässern,
+- und die Streamingzahlen sanken.
+An diesem Punkt startete Jonathan Pieper, damals Trainee beim Media Lab Bayern, in seine sechsmonatige Trainee-Station bei Utopia. Nachhaltigkeit war ein Thema, mit dem er sich bereits privat viel beschäftigte. Und durch seine berufliche Vorerfahrung in der Formatentwicklung brachte er eine Mischung aus Analysefähigkeit, Kreativität und strategischem Denken mit. 
 
-If there's one thing almost every speaker could agree on, then that 'AI' is _inevitable_ and that its adoption is a matter of _urgency_. Speakers repeatedly invoked the present moment in exaggerated terms, describing it as a "big transformation," an "AI revolution," or an "age of disruption" in which the "speed of change is unrelenting." At its most dramatic, this rhetoric was framed as a question of journalism's very survival.
+Genau darin lag die Chance für Utopia: Mit Jonathan kam jemand ins Team, der operativ anpacken und zugleich strategische Grundlagen neu entwickeln konnte. Aus dieser Situation entwickelte Martin Tillich einen zweigleisigen Arbeitsansatz für Jonathan: 
 
-In some instances, the rhetoric took on epochal tones, as multiple speakers compared the present of 'AI' to past technological changes, such as the printing press, even arguing the media industry is facing the "greatest disruption since the Industrial Revolution."  Here, speakers borrowed the retrospective inevitability of past transformations, while side-stepping the inherent messiness of these upheavals when it came to their social, cultural, labour and economic changes. And, of course, the fact that these changes took decades, if not centuries, to take effect betrays their apparent urgency.#note[_Cook, S. D. N._ (1995). #link("https://doi.org/10.1007/978-94-015-8418-0_4")[The Structure of Technological Revolutions and the Gutenberg Myth]. In J. C. Pitt (Ed.), New Directions in the Philosophy of Technology (pp. 63–83). Springer Netherlands.]
+*Strategisch*: Erarbeitung der Grundlagen für eine langfristige Podcast-Strategie – mit Blick auf Zielgruppe, Positionierung, zentrale Themen und Dramaturgie.
 
-Similarly, the critical management scholar Chris Grey has argued that the idea of an unprecedented, unrelenting moment of change is effectively self-fulfilling. Acting on the assumption of change will ultimately bring it about. Crucially, Grey continues, this notion is also strategic, as "a significant rhetorical device to provoke fear and provide a justification for particular organisational changes." #note[_Grey, C._ (2022). A very short, fairly interesting and reasonably cheap book about studying organizations (Fifth edition). SAGE.]
+*Operativ*: Umsetzung erster konkreter Maßnahmen, die unmittelbar Wirkung zeigen.
 
-I think it is less important if these things will turn out to be true, as such expectations—as mentioned above—can turn into self-fulfilling prophecies. What is more interesting is what this rhetoric forecloses: the question of _whether_ the usage of 'AI' is strategically warranted; instead, the discourse is depoliticised and limited to the _shape_ of that adoption.
+Damit war Jonathans Aufgabe klar umrissen. Er sollte herausfinden, warum der Podcast an Reichweite verlor, wie sich diese Entwicklung stoppen ließ und wie das Format sowohl kurzfristig stabilisiert als auch langfristig neu ausgerichtet werden konnte.
 
-That is not to say that how 'AI' is created and deployed by big tech companies does not put material pressure on journalism's business model or professional territory. Still, speakers seldom took the time to consider the technology's power dimensions.
+== Ein Start im Datennebel
 
-= 'AI' as a managerial technology
+Die Zusammenarbeit war von Beginn an von großem Vertrauen geprägt. „Mach das, wovon du überzeugt bist“, war die Botschaft der Utopia-Kolleg:innen an Jonathan. Dieses Vertrauen zahlte sich schnell aus:
 
-The question, then, is what speakers expected to gain from adopting 'AI'. As most speakers held management positions, it is not surprising that this coloured their vision.
+#pullquote(attribution: "Martin Tillich", "Jonathan hat uns sofort mit seinem strategischen Denken, seinem journalistischen Gespür und seinem sicheren Umgang mit Zahlen überzeugt.")
 
-'AI', in other words, was expected to increase journalism in _speed_ and _scale_. In particular, successful projects were narrated along those lines, with a focus on metrics such as article counts or production time.
+Jonathan stand aber auch vor einer grundlegenden Frage: Womit fängt man an, wenn man einen Podcast strategisch neu bewerten soll? Beruflich war das Format Neuland für ihn. Also eignete er sich das nötige Wissen in kurzer Zeit selbstständig an.
 
-_Speed_ is native to journalism. It is so deeply embedded in the profession that one of the core distinctions of a good newsroom is who broke a story first. In fact, if there's one criterion that determines whether journalists adopt a technology, it is whether it speeds up news production.#note[This is arguably the reason why journalists liked _Twitter_ so much, as it worked (once) like the cross of a newsticker and professional social network.] That 'AI' is used and argued for along this line is not surprising.
+Doch bereits die ersten Analysen stellten ihn vor Herausforderungen: Der Podcast wird über Podigee gehostet – ein gängiges Tool, das jedoch nur begrenzt auswertbare Daten liefert. Entscheidend wichtige Kennzahlen wie Durchhörquoten oder Absprungpunkte fehlten komplett. Sogar den Jahresdurchschnitt der Streams musste Jonathan mühsam selbst berechnen.
 
-_Scale_, on the other hand, has a different lineage. As a core value, it is found in software engineering, especially in _Silicon Valley's_ startup economy.#note[_Pfotenhauer, S., Laurent, B., Papageorgiou, K., & Stilgoe,  and J._ (2022). #link("https://doi.org/10.1177/03063127211048945")[The politics of scaling]. Social Studies of Science, 52(1), 3–34.] Journalism has, over the last decade, imported software engineering and startup practices (e.g., design thinking, lean innovation),#note[_Meese, J., & Seipp, T._ (2025). #link("https://doi.org/10.1080/21670811.2025.2573074")[The Press as Platform: Institutional Isomorphism and the Strategic Adoption of Platform Logics]. Digital Journalism.] and thus also imported _scale_ as a value to build its organisations, business models, and technologies around.
+Parallel analysierte er die Struktur und Konsistenz des Podcasts. Ihm fiel auf:
 
-'AI', in other words, is imagined and deployed in line with managerial and software engineering logics. While it was described as a disruption and a break with history, it was still imagined along the well-trodden historical paths of the industry.
+- Die Folgenbeschreibungen wirkten uneinheitlich,
+- Titel waren stilistisch sehr unterschiedlich
+- und der damalige Podcast-Name („Der Utopia Podcast“) machte nicht klar, worum es inhaltlich eigentlich ging.
 
-It is thus worth noting what was seldom promised on stage: qualitatively better journalism. This is not to say that _speed_ and _scale_ cannot be indicators of quality or that there aren't challenges that align particularly well with these values, but that this kind of distinction was never made. Similarly, while speakers discussed _efficiency_ at length, _effectiveness_ remained an underexplored, but in my opinion, important avenue for 'AI' use.
+Außerdem hatten sich mit dem Weggang der Redakteurin nicht nur die Zuständigkeiten, sondern auch das Format verändert. Alltagsnahe Nachhaltigkeitstipps waren Interviews gewichen, die entsprechend vorbereitet werden mussten. Diese Mehrarbeit war für das Utopia-Team schwer zu stemmen. Die Konsequenz: weniger Kontinuität und eine sinkende Durchhörquote. 
 
-#pagebreak()
-= Humans in loops
+== Daten als Grundlage für strategische Entscheidungen
 
-What then is the journalist's new place in automated systems? Here, more than on any other topic, we can see the clearest negotiation around 'AI'. Multiple speakers and showcases ensured that a journalist remained the final authority over a piece to be published. A gatekeeper, either as a legal necessity, as a final check to ensure factual correctness, or to defend against potential internal headwind.
+Ein entscheidender Wendepunkt war der systematische Zugang zu den Analyse-Tools der relevanten Podcast-Plattformen. Über Spotify for Creators und Apple Podcasts for Creators standen erstmals umfassende historische Nutzungsdaten zur Verfügung. Diese ermöglichten eine fundierte Auswertung von Zielgruppenstruktur, Hörverhalten und Abbruchpunkten.
 
-These configurations were generally described as _human-in-the-loop_. That said, the exact ways in which these loops functioned, what information people were expected to monitor at which speeds and with what kind of input, remain unexplored. Not one speaker provided details.#note[One way to interpret _human-in-the-loop_ then is to understand it as a _buzzword_. A discoursive signpost, which is not meant to be excavated for deeper meaning.
-#linebreak()
-#linebreak()
-_Bensaude Vincent, B._ (2014). #link("https://doi.org/10.1177/0963662513515371")[The politics of buzzwords at the interface of technoscience, market and society: The case of 'public engagement in science']. Public Understanding of Science, 23(3), 238–253.]
+Die Datengrundlage machte mehrere zentrale Handlungsfelder sichtbar:
 
-Notably absent from these discussions was the term's critical lineage. Lisanne Bainbridge, writing on the "Ironies of Automation,"#note[_Bainbridge, L._ (1983). Ironies of automation. Automatica, 19(6), 775–779. https://doi.org/10.1016/0005-1098(83)90046-8] warned that placing humans in supervisory roles over increasingly automated systems risks deskilling and fatigue—the human is asked to monitor a system precisely when they are losing the expertise needed to detect its failures. Further, humans in such positions are often left with a bundle of unrelated tasks that a systems designer cannot automate but that they are expected to fulfil, thereby degrading a system's functionality. On stages, this warning went unmentioned: the loop was adopted as a reassuring label, stripped of the potential dangers of such configurations.
+- Die Altersstruktur des Publikums hatte sich deutlich verschoben: Während die zuvor starke Gruppe der 27- bis 35-Jährigen zurückgegangen war, nahm der Anteil der Hörer:innen über 35 Jahre signifikant zu.
+- Die Durchhörquote lag unter dem angestrebten Niveau und zeigte Optimierungspotenzial im Aufbau der Folgen.
+- Die inhaltliche Gestaltung folgte keinem konsistenten Relevanz- und Dramaturgieschema, was die Bindung über eine gesamte Episode hinweg erschwerte.
 
-The product of journalism is, in other words, not just a piece of content, but also a journalist. Building systems to replace skills or certain decision-making steps could result in less capable, less observant, less autonomous journalists and—in the worst case—a diminished public sphere.
-#note(dy:0em,[
-  #figure(
-    image("/assets/loops.png"),
-    caption:[The Euthanasia Coaster is a hypothetical steel roller coaster and euthanasia device designed with the sole purpose of killing its passengers.]
-  )
-])
+== Die Nachschärfung
+Auf Basis der neuen Datengrundlage entwickelte Jonathan gemeinsam mit den Kolleg:innen von Utopia ein Bündel an Maßnahmen:
 
-The limited diversity of speakers and, especially, the absence of people with HCI or automation expertise, resulted in a very narrow understanding of how automated systems were to be built and monitored.
+=== 1. Rebranding
+Die Titel und Beschreibungen wurden vereinheitlicht und der Podcast erhielt einen neuen Namen, der den thematischen Kern sofort erkennbar machte. Aus „Der Utopia Podcast“ wurde „Utopia – Dein Podcast für Nachhaltigkeit“.
 
-#pagebreak()
-= The datafication and liquidation of journalism
+Ziel war es, den Podcast bereits im Feed klar zu positionieren. Auch Nutzer:innen, die Utopia noch nicht kannten, sollten auf den ersten Blick verstehen, wofür das Format steht. Das Rebranding war damit kein rein visueller Schritt, sondern eine strategische Maßnahme zur besseren Auffindbarkeit, Einordnung und Wiedererkennbarkeit des Produkts.
 
-It is thus not surprising that thinking with 'AI' leads to thinking about data, especially input data. While some use cases presented were interesting (such as helping with newsroom planning based on local council minutes), others were ethically fraught, such as automatically generating articles from police reports.#note(dy: -5em)[Giving PR departments of police units uncontrolled access to reporting is, in my opinion, way beyond what should be considered a reasonable use case, even though human police reporting is also not always up to journalism's own normative standards.] This datafication also extends inwards. The archive of news organisations is recast as a data pool that automated systems will draw from.
+#pullquote(attribution: "Martin Tillich", "Beim Rebranding hat Jonathan einen hervorragenden Job gemacht.")
 
-Some people imagine a future where AI doesn't just help write articles, but replaces the article itself—breaking journalism down into raw facts that get reassembled differently for each reader.
+=== 2. Struktur-Refresh
+Auf Basis der Durchhördaten entwickelte Jonathan einen strukturellen Rahmen für die Folgen: kürzere Intros, klar platzierte Werbeblöcke und eine insgesamt straffere Grunddramaturgie.
 
-Here, articles were reimagined as being created out of  "information bits" or as "bundles of facts", which can be poured, like a liquid, into various personalised formats. #note[_Newman, N._ (2026). Journalism and technology trends and predictions 2026. Reuters Institute for the Study of Journalism. https://doi.org/10.60625/RISJ-PS1D-NP11] Here, then, gatekeeping (or any other form of editorial control) is completely delegated to the machine. It is, in my own words, a particularly _loud_ future.
+Statt den Redakteur:innen einen festen Ablauf vorzuschreiben, formulierte er Leitfäden für Intro und Outro sowie einen groben zeitlichen Rahmen für die Episoden. Innerhalb dieses Rahmens blieb die Redaktion in Aufbau und Erzählweise frei, sodass die neuen Strukturen ohne zusätzlichen redaktionellen Aufwand in den bestehenden Workflow integriert werden konnten.
 
-The article, whatever its limitations, functions as a unit of authorship and thus accountability: someone wrote it, someone published it, and someone can be held responsible for its claims. When journalism is reconceived as a data pipeline, this accountability structure may become difficult to sustain.
+Ziel war es, die Durchhörquote gezielt zu steigern – eine zentrale Kennzahl für die algorithmische Ausspielung von Podcasts und damit für Reichweite und Vermarktung. Lange Einstiege und unklare Übergänge hatten zuvor dazu geführt, dass viele Hörer:innen früh absprangen. Durch den neuen strukturellen Rahmen blieben sie deutlich länger bei den Episoden.
 
-Arguably, this kind of vision can also be read in the context of 'AI' as an inevitable, epochal shift. This expectation, then, necessitates a similar epochal reimagining of journalism itself. It should be noted that, here again, the unasked question on stage (and off stage) was _whether_ that future is desirable. Instead, where people argued for it, it was similarly seen as inevitable.
+=== 3. Thematische Ausrichtung
+Gemeinsam mit Martin Tillich entwickelte Jonathan eine thematische Ausrichtung, die sich stärker am Alltag der unterrepräsentierten Altersgruppe der 26- bis 35-Jährigen orientierte: Mobilität, Energie, Second Hand sowie gesellschaftspolitische Themen wie Bundestagswahl oder Klimaschutz.
 
-#pagebreak()
-= A final note
-The field of journalism has imported a substantial vocabulary and corresponding logics from software engineering and automation research. What it has not imported, at least on the stages I examined, is the critical lineage from which these terms originally arose. Whether this is by design or by accident is not a question my thesis can answer, and I do not think it needs to be answered for my argument to hold, as the effect is the same either way.
+Dabei ging es nicht darum, Inhalte gezielt zu „verjüngen“, sondern um Alltagsnähe, Relevanz und Diskursfähigkeit. Die Themen sollten konkrete Fragen aus dem Leben dieser Altersgruppe aufgreifen und zugleich gesellschaftliche Debatten verständlich einordnen.
 
-An industry discourse that adopts this vocabulary while remaining structurally isolated from automation's own critical literature in HCI and UX research is at risk of relearning, the hard way, lessons—about deskilling, about misplaced oversight, about the "ironies" Bainbridge identified forty years ago—that are already established elsewhere. Critical, politically literate accounts of 'AI' were staged but contained from the managerial mainstream, further impoverishing the discourse.
+Einzelne Themen und Gäst:innen waren bewusst auch so gewählt, dass sie über Social Media jüngere Hörer:innen erreichen konnten. Der inhaltliche Fokus lag jedoch darauf, den zuletzt deutlich geschrumpften Anteil der 26- bis 35-Jährigen wieder zu erhöhen.
 
-Journalism runs the risk, supported rather than checked by the events meant to inform its adaptation to 'AI', of bending itself around narrow, exaggerated, tech-deterministic expectations of what that adaptation requires. Bainbridge's ironies were not a one-time warning but described a recurring pattern: pursuing efficiency, speed, and scale through automation quietly produces new and less familiar modes of failure.
+#explainer(dy:0em)[
+  #image("/assets/PDC-Cover1.png")
+  Podcast-Folge mit Klimapolitikexperte Peter Jelinek
+]
 
-Journalism has, at present, few structural safeguards against repeating that pattern, not because its practitioners are uncritical but because the events shaping its future currently offer few opportunities for that criticism to reach the stage at all.
+Die Folge zur Bundestagswahl 2025 Ende Januar (#link("https://utopia.podigee.io/199-bundestagswahl-klimaschutz")[„Welche Partei verspricht den stärksten Klimaschutz?“]) und das später sehr erfolgreiche Interview mit Ernährungswissenschaftler Niko Rittenau gingen direkt aus diesen neuen Überlegungen hervor.
+
+=== 4. Social Media als Reichweitenhebel
+Trotz über 350.000 Instagram-Followern war der Podcast dort zuvor kaum präsent. Jonathan änderte das mit regelmäßigen Beiträgen, Stories und einer deutlich besseren inhaltlichen Verpackung einzelner Episoden.
+
+Social Media fungierte dabei nicht als isolierter Kanal, sondern als Verstärker der neuen Podcast-Strategie: Themen wurden verlängert und jüngere Zielgruppen gezielt angesprochen. Von dieser erhöhten Aufmerksamkeit profitieren auch komplexere oder weniger „junge“ Folgen.
+
+#pullquote(attribution: "Jonathan Pieper", "Wir haben gemerkt: Wenn manche Folgen gezielt jüngere Leute ansprechen, profitieren auch die Folgen dazwischen. Selbst wenn die thematisch nicht ganz so ‚jung‘ wirken.")
+
+== Zusammenarbeit und Sparring
+Bei Utopia erlebte Jonathan starken Rückhalt. In regelmäßigen Meetings tauschte er sich mit Martin aus, diskutierte Ideen und erhielt wertvollen inhaltlichen Input. Daraus wurde ein produktiver, konstruktiver Prozess – unterstützt auch durch begleitende Coaching-Sessions im Rahmen des Traineeships. Diese halfen ihm, Mut zu fassen, Entscheidungen zu treffen und den eigenen Weg zu finden.
+
+== Ergebnis und Fazit
+Jonathan hatte sich zwei KPIs gesetzt, an denen sich Reichweite und algorithmische Ausspielung von Podcasts direkt ablesen lassen
+
+- Streams nach vier Wochen
+- Durchhörquote
+
+Bereits nach wenigen Monaten zeigten sich messbare Erfolge, was angesichts der begrenzten personellen Ressourcen und der kurzen Zeitspanne keineswegs selbstverständlich war. Beide Kennzahlen verbesserten sich deutlich und bestätigten die strategische Nachschärfung:
+
+- +30 Prozent mehr Streams
+- Durchhörquote von 45 auf 58 Prozent
+
+#explainer[
+  #image("/assets/PDC-Cover2.jpg")
+  Podcast-Folge mit Klimapolitikexperte Peter Jelinek
+]
+
+Neben der Folge zur Bundestagswahl erwies sich vor allem das zweiteilige Interview mit Niko Rittenau (geführt von Benjamin Hecht) als großer Erfolg: Der erste Teil (#link("https://utopia.podigee.io/203-vegane-ernahrung-nicht-fur-alle-gesund")[„Ist vegane Ernährung nicht für alle gesund?“]) wurde zur reichweitenstärksten Episode der vergangenen 12 Monate  mit rund 6.000 Streams nach vier Wochen. 
+
+Die Ergebnisse am Ende des Traineeships machten deutlich, dass die Kombination aus fundierter Analyse, klarer strategischer Ausrichtung und gezielten strukturellen Anpassungen den Podcast messbar zurück auf Wachstumskurs brachte. Gleichzeitig entstanden strategische Grundlagen, die über kurzfristige Effekte hinausweisen.
+
+#pullquote(attribution: "Jonathan Pieper", "Ich war beeindruckt, wie viel Vertrauen mir als Trainee vom ersten Tag an entgegengebracht wurde.")
+
+Entscheidend für den Erfolg war dabei auch die enge Zusammenarbeit mit der Utopia-Redaktion. Trotz begrenzter personeller Ressourcen trugen die Redakteur:innen die neuen Leitlinien, Themenfokussierungen und strukturellen Anpassungen aktiv mit und setzten sie konsequent um. Dass ein Trainee in kurzer Zeit solches Vertrauen gewinnen und Veränderungen im redaktionellen Alltag verankern konnte, war eine zentrale Voraussetzung für die Wirkung der Maßnahmen.
+
+#pullquote(attribution: "Martin Tillich", "Was bis heute nachwirkt, ist die Erkenntnis, dass wir im Podcast-Bereich das Know-how brauchen, das wir in anderen Bereichen längst haben. Jonathan hat begonnen, dieses Wissen bei uns aufzubauen.")
+
+Das Fazit von Chefredakteur Martin Tillich unterstreicht: Das Projekt war nicht nur eine operative Stabilisierung, sondern ein strategischer Ausgangspunkt für die zukünftige Weiterentwicklung des Formats.
+
+= Jonathan, was nimmst du aus dem Traineeship mit?
+
+„Dass mir strategisches Arbeiten sehr viel Spaß macht und dass ich mich weiterhin in der Medienbranche sehe. Allerdings erstmal  im Bereich Management und Strategie als im klassischen Redaktionsalltag.
+
+Gleichzeitig habe ich festgestellt, dass ich mir die Arbeit im Audiobereich sehr gut vorstellen kann. Gegen Ende meiner Zeit bei Utopia durfte ich erstmals eine eigene Podcast-Folge#note()[#link("https://utopia.podigee.io/207-wie-gelingt-nachhaltig-guter-schlaf")["Wie gelingt nachhaltig guter Schlaf?"], Anm. d. Red.] planen, hosten und umsetzen. Das hat mich sehr weitergebracht  und mir gezeigt, dass ich mir solche redaktionelle Aufgaben durchaus zutrauen kann.
+
+Fachlich habe ich vor allem meine analytischen Fähigkeiten geschärft: Daten auswerten, Muster erkennen und daraus konkrete Maßnahmen ableiten. Außerdem habe ich gelernt, Entscheidungen noch bewusster vorzubereiten – also erst alle relevanten Informationen sammeln und dann gezielt handeln. Diese Kombination aus Analyse, Strategie und praktischer Erfahrung hat mein Bild von meiner beruflichen Zukunft in der Medienbranche deutlich geschärft.“
