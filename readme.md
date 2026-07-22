@@ -11,6 +11,25 @@ Das Template basiert auf **Typst**, einem modernen Tool zur Dokumentenerstellung
 Dieses README richtet sich an alle im Team – auch ohne technischen Hintergrund.
 Du musst **keine Programmierkenntnisse** haben, um damit zu arbeiten.
 
+## Überblick
+
+```
+.
+├── assets
+│   ├── ...   // Ordner für Bilder oder Grafiken
+│   ├── logos
+│   │   └── ...   // Logos für den Report
+│   └── loops.png
+├── mlb-template   // Hauptordner für das Report-Template 
+│   ├── mlb-example.typ // Beispiel-Report
+│   ├── references.bib // Beispiel Literaturverzeichnis
+│   ├── short_ref.csl
+│   └── vendor
+│       └── mlb-template
+│           └── ...   // Template-Dateien
+└── readme.md
+```
+
 ## Grundprinzip
 
 Ein Report besteht aus zwei Teilen:
