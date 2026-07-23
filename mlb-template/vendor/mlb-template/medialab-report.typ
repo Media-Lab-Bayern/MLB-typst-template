@@ -5,15 +5,6 @@
 
 // == BRAND ==
 
-#let wideblock(content) = block(width:100%+2.5in,content)
-#let styledbox(color, content) = box(
-  width: 100%,
-  fill: color,
-  radius: 8pt,
-  inset: (x: 16pt, y: 14pt),
-  content
-)
-
 #let sans-fonts = (
   "IBM Plex Sans",
 )
@@ -27,6 +18,73 @@
 #let mlb-marin = rgb("#04313E")
 #let mlb-calming-blue = rgb("#90B4C2")
 #let mlb-yellow = rgb("#FAFD6F")
+
+#let wideblock(content) = block(width:100%+2.5in,content)
+#let styledbox(color: mlb-turquoise.lighten(90%), content) = block(
+  below: 3em,
+  above: 3em,
+  box(
+    width: 100%,
+    fill: color,
+    radius: 8pt,
+    inset: (x: 16pt, y: 14pt),
+    content
+  )
+)
+
+// == Outcome / Showcase blocks ==
+
+#let outcome(
+  number: none,
+  suffix: none,
+  color: mlb-turquoise.lighten(90%),
+  accent: mlb-turquoise,
+  height: auto,
+  content
+) = box(
+  width: 100%,
+  height: height,
+  fill: color,
+  radius: 8pt,
+  inset: (x: 16pt, y: 16pt),
+  {
+    set text(font: sans-fonts)
+    set par(first-line-indent: 0em, justify: false, leading: 0.55em)
+    if number != none {
+      text(font: heading-fonts, size: 2.6em, weight: "regular", fill: accent, features: ("ss02", "ss03"), number)
+      if suffix != none {
+        text(font: heading-fonts, size: 1.6em, fill: accent, suffix)
+      }
+      v(0.5em, weak: false)
+      text(size: 0.8em, fill: mlb-marin, content)
+    } else {
+      box(width: 1.4em, height: 0.25em, fill: accent, radius: 999pt)
+      v(2.2em, weak: false)
+      text(size: 0.8em, weight: "regular", fill: mlb-marin, content)
+    }
+  }
+)
+
+// Items are passed as closures `h => outcome(..., height: h)[...]` so the
+// grid can render each one twice: once at auto-height to measure it at
+// the real column width, then again pinned to the tallest measured height.
+#let outcomes-grid(columns: 2, gutter: 6pt, ..items) = wideblock(
+  layout(size => context {
+    let col-width = (size.width - gutter * (columns - 1)) / columns
+    let heights = items.pos().map(item => measure(box(width: col-width, item(auto))).height)
+    let max-height = calc.max(..heights)
+    block(
+      breakable: false,
+      grid(
+        columns: (1fr,) * columns,
+        column-gutter: gutter,
+        row-gutter: gutter,
+        align: (top, top),
+        ..items.pos().map(item => item(max-height))
+      )
+    )
+  })
+)
 
 // == TEMPLATE ==
 #let template(
@@ -53,7 +111,7 @@
   distribution: none,
   abstract: none,
   publisher: none,
-  contact: true,
+  contact: false,
   toc: none,
   author-bio: none, // dict: (name: "...", bio: "...", image: none) — closing "Artikel geschrieben von" note; image is optional, a rounded placeholder is drawn if omitted
   impressum: true,
@@ -90,7 +148,7 @@
   // H2
   show heading.where(level: 2): it => {
     set text(size: 1.3em, weight: "bold", fill: mlb-marin)
-    v(2.4em, weak: false)
+    v(1em, weak: false)
     block(
       above: 1em,
       below: 1em,
@@ -111,7 +169,14 @@
   }
 
   // Tables and figures
+  set figure(numbering: none)
+  show figure.where(kind: image): set figure(numbering: none)
+  show figure.where(kind: image): set figure(
+    numbering: none,
+    supplement: none
+  )
   show figure: set figure.caption(separator: [.#h(0.5em)])
+  show figure: set block(spacing: 1.5em)
   show figure.caption: set align(left)
   show figure.caption: set text(font: sans-fonts, size: 0.75em, fill: mlb-turquoise)
 
@@ -120,11 +185,35 @@
   show figure.where(kind: table): it => wideblock(it)
   show table: it => wideblock(it)
 
-  show figure.where(kind: image): set figure(supplement: [Figure], numbering: "1")
+  show figure.where(kind: image): set figure(supplement: [Figure], numbering: none)
 
   show figure.where(kind: raw): set figure.caption(position: top)
   show figure.where(kind: raw): set figure(supplement: [Code], numbering: "1")
   show raw: set text(font: sans-fonts, size: 10pt)
+
+  // Image Styling
+  show image: it => {
+  let src = it.source
+
+  // Try to safely detect file extension
+  let is-svg = if type(src) == str {
+    src.ends-with(".svg")
+  } else if type(src) == path {
+    str(src).ends-with(".svg")
+  } else {
+    false
+  }
+
+  if is-svg {
+    it
+  } else {
+    box(
+      radius: 4pt,
+      clip: true,
+      it
+    )
+  }
+}
 
   // Table styling: horizontal rules only, brand-neutral gray
   set table(
@@ -191,20 +280,20 @@
                   radius: 999pt,
                   text(size: 0.75em, upper(document-number)),
                 ) 
-                }
+              }
               #h(1em)
               #if shorttitle != none { upper(shorttitle) } else { upper(title) }
               #if publisher != none {
                 linebreak()
                 upper(publisher)
               }
-            ],
+            ]
           ],
           image(
             "../../../assets/logos/MLB-1-line.svg",
             width: 4cm,
             fit: "contain",
-          ),
+          )
         ),
         )
       } else {
@@ -298,7 +387,7 @@
           text(font: sans-fonts, size: 9pt, fill: white, tracking: 0.08em, upper(category))
           v(3em, weak: true)
         }
-        set text(hyphenate: true, size: 7em, font: heading-fonts, weight: "regular", fill: white, features: ("ss02", "ss03"))
+        set text(hyphenate: false, size: 6em, font: heading-fonts, weight: "regular", fill: white, features: ("ss02", "ss03"))
         set par(leading: 0.15em, first-line-indent: 0pt)
         title
         linebreak()
@@ -479,13 +568,13 @@
   )
 })
 
-  let abstractblock(abstract) = styledbox(mlb-turquoise.lighten(90%), {
-      set text(font: sans-fonts)
-      set par(first-line-indent: 0em)
-      text(size: 0.64em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Zusammenfassung])
-      v(0.8em)
-      abstract
-    })
+  let abstractblock(abstract) = styledbox(color: mlb-turquoise.lighten(90%), {
+    set text(font: sans-fonts)
+    set par(first-line-indent: 0em)
+    text(size: 0.64em, weight: "bold", fill: mlb-turquoise, tracking: 0.05em, upper[Zusammenfassung])
+    v(0.8em)
+    abstract
+  })
 
   // TOC
   let tocblock() = wideblock(context {
@@ -604,28 +693,31 @@
   contactblock(authors)
   }
   if impressum {
-  v(1em)
-  styledbox(mlb-turquoise.lighten(95%),
+    pagebreak()
+    v(1fr)
+    wideblock(
+    styledbox(color: mlb-turquoise.lighten(95%),
     {
-    set text(fill: mlb-marin.lighten(25%), size: 0.8em)
-    set par(first-line-indent: 0em)
-    [==== Impressum]
-    linebreak()
-    [*Medien.Bayern GmbH* \
-    Balanstr. 73 / Haus 11 \
-    81541 München \
-    himedia-lab.de
-    \
-    \
-    © MEDIA LAB BAYERN ] 
-    date.display("[year]")
-    linebreak()
-    linebreak()
-    [V.I.S.D.P.: Annette Kümmel.]
-    linebreak()
-    linebreak()
-    [Das Media Lab Bayern eine ist Initiavite der Medien.Bayern GmbH und wird gefördert durch die Bayerische Landeszentrale für neue Medien und die Bayerische Staatskanzlei.]
-    }
+      box(width:60%, {
+        set text(fill: mlb-marin.lighten(25%), size: 0.8em)
+      set par(first-line-indent: 0em)
+      heading(level: 4)[Impressum]
+      linebreak()
+      [*Medien.Bayern GmbH* \
+      Balanstr. 73 / Haus 11 \
+      81541 München \
+      himedia-lab.de
+      \
+      \
+      © MEDIA LAB BAYERN #date.display("[year]")]
+      linebreak()
+      linebreak()
+      [V.I.S.D.P.: Annette Kümmel.]
+      linebreak()
+      linebreak()
+      [Das Media Lab Bayern eine ist Initiavite der Medien.Bayern GmbH und wird gefördert durch die Bayerische Landeszentrale für neue Medien und die Bayerische Staatskanzlei.]
+      })
+    })
   )
   }
 }
@@ -720,17 +812,58 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
   )))
 }
 
-// == Pullquotes ==
+// == Quotes ==
+
+#let quote(attribution: none, color: mlb-turquoise.lighten(92%), accent: mlb-turquoise, content) = {
+  box(
+    width: 100%,
+    inset: (x: 1em, y: 1em),
+    {
+      // Quote text
+      set text(
+        font: sans-fonts,
+        size: 1.0em,
+        weight: "regular",
+        fill: mlb-marin,
+        hyphenate: false,
+        features: ("ss02", "ss03")
+      )
+      set par(leading: 0.6em, first-line-indent: 0pt)
+
+      content + if attribution != none {
+        h(0.5em, weak: false)
+        set text(
+          font: sans-fonts,
+          size: 8pt,
+          weight: "bold",
+          fill: accent,
+          tracking: 0.04em
+        )
+        upper(attribution)
+      }
+    }
+  )
+
+  v(0.5em, weak: false)
+}
 
 #let marginquote(attribution: none, dy: auto, content) = {
   box(move(dy: sidenote-lift, margin-note(
     {
-      set text(font: heading-fonts, size: 1.3em, hyphenate: false, weight: "regular", fill: mlb-turquoise)
+      set text(font: heading-fonts, size: 18pt, hyphenate: false, weight: "regular", fill: mlb-turquoise, features: ("ss02", "ss03"))
       set par(leading: 0.4em, first-line-indent: 0pt)
       content
       if attribution != none {
-        v(0.4em)
-        text(font: sans-fonts, size: 8pt, weight: "regular", fill: sidenote-color, upper(attribution))
+        linebreak()
+        v(3pt, weak: false)
+        set text(
+          font: sans-fonts,
+          size: 8pt,
+          weight: "bold",
+          fill: gray,
+          tracking: 0.04em
+        )
+        upper(attribution)
       }
     },
     dy: dy,
@@ -745,9 +878,31 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
 
 #let pullquote(attribution: none, content) = wideblock({
   v(1.5em, weak: false)
-  set text(font: sans-fonts, size: 1.5em, weight: "bold", fill: mlb-marin)
+  set text(font: sans-fonts, size: 1.5em, weight: "bold", fill: mlb-marin, hyphenate: false)
   set par(leading: 0.6em, first-line-indent: 0pt, justify: false)
   box(width: 85%, {
+    content
+  })
+  if attribution != none {
+        linebreak()
+        v(6pt, weak: false)
+        set text(
+          font: sans-fonts,
+          size: 8pt,
+          weight: "bold",
+          fill: mlb-turquoise,
+          tracking: 0.04em
+        )
+        upper(attribution)
+      }
+  v(0.5em, weak: false)
+})
+
+#let largequote(attribution: none, content) = wideblock({
+  v(3em, weak: false)
+  set text(font: heading-fonts, size: 4em, weight: "regular", fill: mlb-marin, hyphenate: false, features: ("ss02", "ss03"))
+  set par(leading: 0.3em, first-line-indent: 0pt, justify: false)
+  box(width: 75%, {
     content
   })
   if attribution != none {
@@ -755,5 +910,5 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
     v(0.3em, weak: false)
     text(font: sans-fonts, size: 10pt, weight: "bold", fill: mlb-turquoise, tracking: 0.03em, attribution)
   }
-  v(0.5em, weak: false)
+  v(3em, weak: false)
 })
