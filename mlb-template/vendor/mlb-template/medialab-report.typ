@@ -170,6 +170,7 @@
 
   // Tables and figures
   set figure(numbering: none)
+  show figure: set align(left)
   show figure.where(kind: image): set figure(numbering: none)
   show figure.where(kind: image): set figure(
     numbering: none,
