@@ -13,7 +13,18 @@ Ein Beispiel findest du hier: [mlb-example.pdf](mlb-template/mlb-example.pdf)
 Dieses README richtet sich an alle im Team – auch ohne technischen Hintergrund.
 Du musst **keine Programmierkenntnisse** haben, um damit zu arbeiten.
 
-## Überblick
+## Kurz gesagt
+
+Du musst nur:
+
+1. Metadaten ausfüllen
+2. Inhalte schreiben
+3. Gestaltungselemente (Boxen, Zitate, Randnotizen) gezielt einsetzen
+4. PDF exportieren
+
+Alles andere übernimmt das Template für dich.
+
+## Überblick über Projektstruktur
 
 ```
 .
@@ -46,7 +57,7 @@ Du arbeitest also hauptsächlich mit Text und ein paar einfachen Einstellungen.
 ### 1. Datei öffnen
 
 Öffne die `.typ`-Datei (z. B. `medialab-report.typ`) in einem geeigneten Editor
-(z. B. Typst Web App oder lokal installiertes Tool).
+(z. B. Visual Studio Code mit der Erweiterung für tinymist oder Typst Web App).
 
 ### 2. Metadaten ausfüllen
 
@@ -277,26 +288,8 @@ Nein. Du arbeitest hauptsächlich mit Text und einfachen Markierungen.
 Grundsätzlich nein – das Template sorgt für Konsistenz.
 Falls etwas fehlt, bitte im Team abstimmen.
 
-## Ziel des Templates
-
-* Einheitliche Reports
-* Schnellere Erstellung
-* Bessere Lesbarkeit
-* Professionelles Erscheinungsbild
-
 ## Ansprechpartner
 
 Bei Fragen oder Problemen wende dich an:
 
 * Johannes Klingebiel
-
-## Kurz gesagt
-
-Du musst nur:
-
-1. Metadaten ausfüllen
-2. Inhalte schreiben
-3. Gestaltungselemente (Boxen, Zitate, Randnotizen) gezielt einsetzen
-4. PDF exportieren
-
-Alles andere übernimmt das Template für dich.
