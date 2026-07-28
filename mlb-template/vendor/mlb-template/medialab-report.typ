@@ -707,7 +707,7 @@
       [*Medien.Bayern GmbH* \
       Balanstr. 73 / Haus 11 \
       81541 München \
-      himedia-lab.de
+      hi\@media-lab.de
       \
       \
       © MEDIA LAB BAYERN #date.display("[year]")]
