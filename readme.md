@@ -105,6 +105,8 @@ Weitere optionale Angaben für `#template(...)`:
 
 Unterhalb des Templates kommt dein eigentlicher Inhalt.
 
+#### Überschriften und Text
+
 Du kannst einfache Überschriften und Text verwenden:
 
 ```typst
@@ -121,6 +123,85 @@ Weitere Inhalte hier.
 * `==` = Unterkapitel
 * `===` = Abschnitt
 * `====` = Schritt-/Listen-Unterüberschrift (z. B. "Die richtige Plattform wählen")
+
+#### Links
+
+Eine Web-Adresse, die du einfach so in den Text schreibst, wird automatisch in einen klickbaren Link verwandelt:
+
+```typst
+Mehr Infos unter https://example.com.
+```
+
+Willst du stattdessen einen eigenen Linktext anzeigen (z. B. "hier klicken" statt der ganzen URL), nutzt du `#link(...)`:
+
+```typst
+Weitere Details findest du #link("https://example.com")[hier].
+```
+
+#### Listen
+
+Für eine **Aufzählung mit Punkten** beginnst du jede Zeile mit einem Bindestrich:
+
+```typst
+- Erster Punkt
+- Zweiter Punkt
+- Dritter Punkt
+```
+
+Für eine **nummerierte Liste** beginnst du jede Zeile mit einem Pluszeichen:
+
+```typst
++ Erster Schritt
++ Zweiter Schritt
++ Dritter Schritt
+```
+
+Möchtest du einen Unterpunkt einrücken, setzt du einfach eine zusätzliche Einrückung (Leerzeichen oder Tabulator) vor die nächste Zeile:
+
+```typst
+- Hauptpunkt
+  - Unterpunkt dazu
+```
+
+#### Bilder
+
+Um ein Bild ohne Bildunterschrift einzufügen (z. B. ein Logo oder eine dekorative Grafik), reicht:
+
+```typst
+#image("assets/mein-bild.png")
+```
+
+Willst du die Größe kontrollieren, z. B. damit das Bild nicht die ganze Seitenbreite einnimmt:
+
+```typst
+#image("assets/mein-bild.png", width: 70%)
+```
+
+Der Pfad bezieht sich auf den `assets`-Ordner aus der Projektstruktur – leg deine Bilder also am besten dort ab.
+
+#### Abbildungen mit Bildunterschrift – `figure`
+
+Wenn ein Bild eine **Bildunterschrift** und eine **automatische Nummerierung** ("Abbildung 1", "Abbildung 2", ...) bekommen soll, verwendest du `#figure(...)` statt `#image(...)` allein:
+
+```typst
+#figure(
+  image("assets/mein-bild.png", width: 80%),
+  caption: [Kurze Beschreibung, was auf dem Bild zu sehen ist],
+)
+```
+
+Willst du später im Text auf genau diese Abbildung verweisen (z. B. "siehe Abbildung 2"), gibst du ihr ein Label und verlinkst darauf:
+
+```typst
+#figure(
+  image("assets/mein-bild.png", width: 80%),
+  caption: [Kurze Beschreibung],
+) <mein-bild>
+
+Wie in @mein-bild zu sehen ist, ...
+```
+
+Typst nummeriert die Abbildung automatisch und aktualisiert die Nummer selbstständig, auch wenn du später weitere Abbildungen einfügst oder die Reihenfolge änderst.
 
 ### 4. Gestaltungselemente nutzen
 
@@ -247,19 +328,6 @@ Die größte und auffälligste Zitat-Variante, in der Überschriften-Schriftart 
 ```
 
 > **Hinweis:** Alle Rand-Elemente (`note`, `notecite`, `explainer`, `marginquote`) benötigen Platz am rechten Seitenrand. Sie können manuell mit `(dy: WERT)` (z. B. `px`, `cm`, `em`, `pt`) verschoben werden, falls sie sich mit anderen Elementen überschneiden.
-
-### 5. Inhaltsverzeichnis (optional)
-
-Wenn `toc: true` gesetzt ist, wird automatisch ein Inhaltsverzeichnis aus deinen Überschriften erstellt.
-
-### 6. Export
-
-Am Ende exportierst du den Report als PDF.
-
-Je nach Tool:
-
-* „Export“ oder „Compile“ klicken
-* oder entsprechenden Befehl ausführen
 
 ## Design & Stil
 
