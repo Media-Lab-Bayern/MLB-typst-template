@@ -36,7 +36,6 @@ Alles andere übernimmt das Template für dich.
 ├── mlb-template   // Hauptordner für das Report-Template 
 │   ├── mlb-example.typ // Beispiel-Report
 │   ├── references.bib // Beispiel Literaturverzeichnis
-│   ├── short_ref.csl
 │   └── vendor
 │       └── mlb-template
 │           └── ...   // Template-Dateien
