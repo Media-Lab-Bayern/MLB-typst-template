@@ -911,5 +911,5 @@ CAUTION: if no bibliography is defined, then this function will not display anyt
     v(0.3em, weak: false)
     text(font: sans-fonts, size: 10pt, weight: "bold", fill: mlb-turquoise, tracking: 0.03em, attribution)
   }
-  v(3em, weak: false)
+  v(0.5em, weak: false)
 })
