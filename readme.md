@@ -26,7 +26,7 @@ Alles andere übernimmt das Template für dich.
 
 ## Überblick über Projektstruktur
 
-```
+```text
 .
 ├── assets
 │   ├── ...   // Ordner für Bilder oder Grafiken
