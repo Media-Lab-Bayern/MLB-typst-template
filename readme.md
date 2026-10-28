@@ -58,48 +58,41 @@ Du arbeitest also hauptsächlich mit Text und ein paar einfachen Einstellungen.
 Öffne die `.typ`-Datei (z. B. `medialab-report.typ`) in einem geeigneten Editor
 (z. B. Visual Studio Code mit der Erweiterung für tinymist oder Typst Web App).
 
-### 2. Metadaten ausfüllen
+### 2. Template-Parameter anpassen
 
-Am Anfang der Datei findest du einen Bereich wie diesen:
+Die Parameter sind hier in der praktischen Reihenfolge der `mlb-example.typ` organisiert. Nicht benötigte optionale Angaben kannst du auf ihrem Standardwert lassen.
 
-```typst
-#template(
-  title: [Report Title],
-  subtitle: none,
-  authors: (
-    (
-      name: "First Last",
-      role: none,
-      organization: none,
-    ),
-  ),
-  date: datetime.today(),
-  abstract: none,
-  ...
-)
-```
+**Layout Options:**
 
-Hier trägst du die wichtigsten Informationen ein:
+* **show-titlepage** → Titelseite ein-/ausblenden
+* **show-author-info** → Autor:innen- und Infoblock unabhängig von der Titelseite ein-/ausblenden
+* **show-abstract** → Zusammenfassung unabhängig von Titelseite und Autor:innenblock ein-/ausblenden
+* **show-toc** → Inhaltsverzeichnis ein-/ausblenden
+* **show-impressum** → Impressum ein-/ausblenden
+* **show-contact** → Kontaktblock am Ende ein-/ausblenden
+* **draft** → Entwurfsmarkierung ein-/ausschalten
 
+**Metadaten:**
+
+* **language** → Dokumentsprache
 * **title** → Titel des Reports
-* **subtitle** → optionaler Untertitel
-* **authors** → Name(n) der Autor:innen
-* **date** → Datum (kann meist so bleiben)
-* **abstract** → kurze Zusammenfassung (optional, aber empfohlen)
+* **shorttitle** → Kurztitel für Kopfzeilen
+* **subtitle** → Untertitel
+* **authors** → Autor:innen mit optionaler Rolle, Organisation, Ort und E-Mail
+* **date** → Datum des Reports
+* **document-number** → Dokumentnummer
+* **publisher** → Herausgeberangabe
+* **distribution** → Vertraulichkeitshinweis
+* **abstract** → Text der Zusammenfassung
+* **author-bio** → Autor:innen-Biografie am Ende
+* **bib** → Literaturverzeichnis, z. B. aus `references.bib`
 
-Weitere optionale Angaben für `#template(...)`:
+**Layout Informationen:**
 
-* **category** → Kicker-Zeile über dem Titel (z. B. "Media Trends")
-* **cover** → Pfad zu einem Titelbild
-* **tags** → Liste von Schlagworten, die als kleine Pillen angezeigt werden
-* **document-number** → Kennnummer, die oben rechts auf jeder Seite erscheint
-* **draft** → `true`/`false`, blendet einen "Draft"-Wasserzeichen und Hinweis ein
-* **distribution** → Vertraulichkeitshinweis in der Fußzeile (z. B. "Intern")
-* **toc** → `true`, um automatisch ein Inhaltsverzeichnis zu erzeugen
-* **contact** → `true`, um am Ende einen Kontakt-Kasten mit Foto einzublenden (benötigt `contact-img`)
-* **author-bio** → Dictionary `(name: "...", bio: "...", image: none)` für eine "Artikel geschrieben von"-Box am Ende
-* **bib** → Literaturverzeichnis (siehe `references.bib`)
-* **impressum** → `true`/`false`, blendet die Impressum-Seite am Ende ein/aus
+* **titlepage-cover** → Bild auf der Titelseite
+* **contact-img** → Bild für den Kontaktblock
+* **category** → Kategorie oder Themenzeile
+* **tags** → Schlagwörter auf der Titelseite
 
 ### 3. Inhalte schreiben
 

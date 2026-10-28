@@ -1,10 +1,23 @@
 #import "vendor/mlb-template/medialab-report.typ": *
 
 #show: template.with(
+  // == Layout Options ==
+  show-titlepage: true, // Titelblatt anzeigen
+  show-author-info: true, // Autor:innen- und Infoblock anzeigen
+  show-abstract: true, // Zusammenfassung anzeigen
+  show-toc: true, // Inhaltsverzeichnis anzeigen
+  show-impressum: true, // Impressum anzeigen
+  show-contact: true, // Kontaktinformationen anzeigen
+  draft: false, // Entwurf-Warnung anzeigen
+
+  // == Metadaten ==
   language: "de",
   title: [Ein Podcast feiert Comeback],
   shorttitle: [],
   subtitle: [Um die langfristige Relevanz zu sichern, brauchte der Podcast von Utopia eine Neuausrichtung. Trainee Jonathan Pieper analysierte die Ausgangssituation und leitete daraus konkrete Maßnahmen ab.],
+  document-number: [Version 1.1],
+  publisher: [],
+  distribution: [All rights reserved.],
   authors: (
     (
       name: "Steffen Geggus",
@@ -13,18 +26,13 @@
       email: "steffen@media-lab.de"
     ),
   ),
-  cover: read("/assets/cover.jpg", encoding: none), // path to a cover/title image; if omitted, a placeholder frame is drawn (like the blog's title image space)
+
+  // == Layout Informationen ==
+  titlepage-cover: read("/assets/cover.jpg", encoding: none), // path to a cover/title image; if omitted, a placeholder frame is drawn (like the blog's title image space)
   contact-img: read("/assets/author.jpg", encoding: none), // path to an author image; if omitted, a placeholder frame is drawn (like the blog's author image space)
   category: "Case Study",
-  tags: ("Research","Artificial Intelligence"),
-  document-number: [Version 1.1],
+  tags: ("Research","Artificial Intelligence"), // Mehrere Tags für den Bericht
   abstract: [Im Media Innovation Traineeship des Media Lab Bayern verbrachte Jonathan Pieper sechs Monate in der Redaktion von Utopia, Deutschlands einflussreichster Medienmarkte für Nachhaltigkeit. Dort arbeitete er an der Distribution, Vermarktung sowie an der inhaltlichen und strategischen Weiterentwicklung von „Utopia – Dein Podcast für Nachhaltigkeit“.],
-  publisher: [],
-  distribution: [All rights reserved.],
-  impressum: true,
-  toc: true,
-  contact: true,
-  draft: false,
 )
 
 = Executive Summary

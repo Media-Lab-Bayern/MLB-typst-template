@@ -88,12 +88,20 @@
 
 // == TEMPLATE ==
 #let template(
+  // Layout Options
+  show-titlepage: true, // set to false to disable the title page
+  show-author-info: true, // set to false to hide author and info blocks
+  show-abstract: true, // set to false to hide the abstract
+  show-toc: none,
+  show-impressum: true,
+  show-contact: false,
+  draft: none,
+
+  // Metadaten
   language: none,
   title: [Report Title],
   shorttitle: none,
   subtitle: none,
-  cover: none,
-  category: none, // e.g. "Media Trends" — shown as the kicker line, like the blog's topic eyebrow
   authors: (
     (
       name: "First Last",
@@ -103,19 +111,20 @@
       email: none
     ),
   ),
-  contact-img: none, // path to an author image; if omitted, a placeholder frame is drawn (like the blog's author image space)
-  tags: none, // e.g. ("Journalismus", "New Work", "Strategie") — shown as small outlined pills, like the blog's topic tags
   date: datetime.today(),
   document-number: none,
-  draft: none,
+  publisher: none,
   distribution: none,
   abstract: none,
-  publisher: none,
-  contact: false,
-  toc: none,
   author-bio: none, // dict: (name: "...", bio: "...", image: none) — closing "Artikel geschrieben von" note; image is optional, a rounded placeholder is drawn if omitted
-  impressum: true,
   bib: none,
+
+  // Layout Informationen
+  titlepage-cover: none,
+  contact-img: none, // path to an author image; if omitted, a placeholder frame is drawn (like the blog's author image space)
+  category: none, // e.g. "Media Trends" — shown as the kicker line, like the blog's topic eyebrow
+  tags: none, // e.g. ("Journalismus", "New Work", "Strategie") — shown as small outlined pills, like the blog's topic tags
+
   doc
 ) = {
   // Document metadata
@@ -370,7 +379,7 @@
 
   // === Title Pages ===
 
-  let titlepage(title, subtitle, category, date, document-number, tags, cover, authors) = {
+  let titlepage(title, subtitle, category, date, document-number, tags, titlepage-cover, authors) = {
     set text(fill: white)
     set page(fill:mlb-turquoise)
     wideblock({
@@ -378,9 +387,9 @@
       pad(x: 0pt, y: 20pt, {
         set par(spacing: 0pt)
         set block(spacing: 0pt)
-        if cover != none {
+        if titlepage-cover != none {
           box(width: 100%, height: 14cm, radius: 8pt, clip: true,
-            image(cover, width: 100%, height: 14cm, fit: "cover"))
+            image(titlepage-cover, width: 100%, height: 14cm, fit: "cover"))
           v(3em, weak: true)
         }
         if category != none {
@@ -603,13 +612,12 @@
     }
     v(3em, weak: true)
   })
-  titlepage(title, subtitle, category, date, document-number, tags, cover, authors)
+  if show-titlepage {
+    titlepage(title, subtitle, category, date, document-number, tags, titlepage-cover, authors)
+  }
 
-  //titleblock(title: title, subtitle: subtitle)
-  //tagsblock(tags)
-  //coverimageblock(cover)
-  //v(1.5em, weak: true)
-  if abstract != none {
+  let show-abstract-block = show-abstract and abstract != none
+  if show-abstract-block and show-author-info {
     grid(
       columns: (0.5fr, 0.1fr),
       gutter: 1em,
@@ -624,11 +632,14 @@
         })
       }
     )
-  } else {
+  } else if show-abstract-block {
+    wideblock(abstractblock(abstract))
+  } else if show-author-info {
     authorblock(authors, 2)
     infoblock(category, date, document-number)
   }
-  if toc {
+
+  if show-toc {
     v(3em, weak: false)
     tocblock()
   }
@@ -689,11 +700,11 @@
     heading(level: 1, [References])
     bib
   }
-  if contact {
+  if show-contact {
   v(4em, weak: true)
   contactblock(authors)
   }
-  if impressum {
+  if show-impressum {
     pagebreak()
     v(1fr)
     wideblock(
