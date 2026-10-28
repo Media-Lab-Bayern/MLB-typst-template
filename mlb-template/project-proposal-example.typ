@@ -6,7 +6,7 @@
   show-abstract: true,
   show-toc: false,
   show-impressum: false,
-  show-contact: false,
+  show-contact: true,
   draft: false,
 
   // Metadata
@@ -33,7 +33,7 @@
 
   // Layout information
   titlepage-cover: none,
-  contact-img: none,
+  contact-img: read("/assets/author.jpg", encoding: none),
   category: "Project proposal",
   tags: ("Planning", "Decision"),
 )
@@ -80,6 +80,8 @@ Summarize the schedule and responsibilities in a table. Replace the placeholders
 
 Use the KPI boxes for numeric targets. Replace the placeholder values and descriptions with the measures that fit this project.
 
+#v(10pt) // Adds vertical space before the KPI section
+
 #outcomes-grid(
   columns: 2,
   h => outcome(height: h, number: "25", suffix: "%")[
@@ -91,3 +93,5 @@ Use the KPI boxes for numeric targets. Replace the placeholder values and descri
 )
 
 *Decision:* Here would be the specific approval or resources requested, and the date a decision is needed.
+
+#v(1fr) // Moves contact information to the bottom of the page
