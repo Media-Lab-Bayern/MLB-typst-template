@@ -6,7 +6,11 @@ Dieses Projekt stellt ein einheitliches Template zur Verfügung, mit dem wir Rep
 
 Das Template basiert auf **Typst**, einem modernen Tool zur Dokumentenerstellung (ähnlich wie Word oder LaTeX, aber einfacher und flexibler).
 
-Ein Beispiel findest du hier: [mlb-example.pdf](mlb-template/mlb-example.pdf)
+Beispiele findest du hier:
+
+* [Case Study (PDF)](mlb-template/case-study-example.pdf)
+* [Projektvorschlag (PDF)](mlb-template/project-proposal-example.pdf) · [Typst-Quelldatei](mlb-template/project-proposal-example.typ)
+* [Memo / Entscheidungsvorlage (PDF)](mlb-template/memo-example.pdf) · [Typst-Quelldatei](mlb-template/memo-example.typ)
 
 ## Für wen ist dieses Dokument gedacht?
 

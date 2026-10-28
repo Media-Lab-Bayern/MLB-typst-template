@@ -429,6 +429,7 @@
       title
       if subtitle != none {
         set text(size: 11pt, weight: "regular", font: sans-fonts)
+        set par(leading: 0.65em)
         v(-0.5em)
         subtitle
       }
@@ -614,6 +615,9 @@
   })
   if show-titlepage {
     titlepage(title, subtitle, category, date, document-number, tags, titlepage-cover, authors)
+  } else {
+    titleblock(title: title, subtitle: subtitle)
+    v(4em)
   }
 
   let show-abstract-block = show-abstract and abstract != none
@@ -642,8 +646,8 @@
   if show-toc {
     v(3em, weak: false)
     tocblock()
+    pagebreak()
   }
-  pagebreak()
 
   doc
 
